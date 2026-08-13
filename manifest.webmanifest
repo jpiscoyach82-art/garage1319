@@ -1,12 +1,11 @@
 {
-  "name": "Garage 1319 · FamPiS",
+  "name": "Garage 1319",
   "short_name": "Garage 1319",
-  "description": "Catálogo, pedidos e inventario para coleccionables diecast.",
+  "description": "Catálogo, inventario, pedidos y ventas.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#07111b",
+  "background_color": "#02070c",
   "theme_color": "#07111b",
   "icons": [
     {
