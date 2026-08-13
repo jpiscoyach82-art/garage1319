@@ -154,7 +154,11 @@ html:not(.g1319-brand-ready) #brandAdminTitle{
 </div>
 <div id="adminPanel" style="display:none"><div class="adminTabs"><button class="adminTab active" data-tab="resumen">Resumen</button><button class="adminTab" data-tab="productos">Productos</button><button class="adminTab" data-tab="reservas">Reservas</button><button class="adminTab" data-tab="pedidos">Pedidos</button><button class="adminTab" data-tab="clientes">Clientes</button><button class="adminTab" data-tab="estadisticas">Estadísticas</button><button class="adminTab" data-tab="promos">Promociones</button><button class="adminTab" data-tab="historial">Historial</button><button class="adminTab" data-tab="negocio">Mi negocio</button><button class="adminTab" data-tab="config">Config</button><button class="adminTab" type="button" onclick="adminLogout()">Salir</button></div>
 <section class="adminSec active" id="sec-resumen"><div class="metrics" id="admMetrics"></div><div class="adminCard"><h4>Base estable</h4><p style="font-size:10px;color:var(--muted)">Supabase es la fuente principal del inventario. Los 8 carros del HTML quedan solo como respaldo visual.</p><div class="adminActions"><button class="abtn primary" onclick="backupNow()">Crear respaldo</button><button class="abtn" onclick="exportNow()">Exportar datos</button></div></div></section>
-<section class="adminSec" id="sec-productos"><div class="adminCard"><h4>Editar producto</h4><input type="hidden" id="epId"><div class="adminGrid"><input id="epName" placeholder="Modelo"><input id="epCode" placeholder="Código"><input id="epPrice" type="number" placeholder="Precio"><input id="epStock" type="number" placeholder="Stock"><input id="epCollection" placeholder="Colección / serie"><input id="epImage" placeholder="URL de imagen (opcional)">
+<section class="adminSec" id="sec-productos"><div class="adminCard"><h4>Editar producto</h4><input type="hidden" id="epId"><div class="adminGrid"><input id="epName" placeholder="Modelo"><input id="epCode" placeholder="Código"><input id="epPrice" type="number" placeholder="Precio"><input id="epStock" type="number" placeholder="Stock"><select id="epCategory">
+<option value="Básico">Básico</option>
+<option value="Premium">Premium</option>
+<option value="Silver Series">Silver Series</option>
+</select><input id="epCollection" placeholder="Colección / serie"><input id="epImage" placeholder="URL de imagen (opcional)">
 <input id="epImageFile" type="file" accept="image/jpeg" style="display:none!important" aria-hidden="true" tabindex="-1">
 <button type="button" id="epCameraLowMem" class="btn secondary" style="margin-top:8px;width:100%">📷 Tomar foto ligera</button><div class="adminPhotoNote">La cámara ligera optimiza la foto antes de subirla a Garage Cloud.</div>
 
@@ -248,6 +252,25 @@ function logH(t){HIST.unshift({d:new Date().toISOString(),t});HIST=HIST.slice(0,
 function actPromo(id){return PRO.find(p=>p.idprod===id&&p.active!==false&&new Date(p.exp).getTime()>Date.now())||null}
 function effPrice(id){let b=Number(ADM[id].price||0),p=actPromo(id);return !p?b:(p.type==='percent'?Math.max(0,Math.round(b*(1-p.val/100))):Math.max(0,Number(p.val||0)))}
 function activeRes(id){return RES.some(r=>r.idprod===id&&r.status==='Activa'&&new Date(r.exp).getTime()>Date.now())}
+
+const BASE_CATEGORY_BY_CODE={
+  "JJH30-N7C6":"Básico",
+  "JBL11-4B10":"Premium",
+  "JBL67-JA10-21A":"Premium",
+  "JCB78-ND511":"Silver Series",
+  "JBL76-JA10-21A":"Premium",
+  "JBM04-4B10":"Premium",
+  "JBK78-4B10":"Premium",
+  "JBK74-4B10":"Premium"
+};
+function normalizeCategory(v,code){
+  const raw=String(v||"").trim().toLowerCase();
+  if(raw==="premium"||raw.includes("premium"))return "Premium";
+  if(raw==="silver"||raw==="silver series"||raw.includes("silver"))return "Silver Series";
+  if(raw==="básico"||raw==="basico"||raw==="basic"||raw.includes("básic")||raw.includes("basic"))return "Básico";
+  const byCode=BASE_CATEGORY_BY_CODE[String(code||"").trim().toUpperCase()];
+  return byCode||"Básico";
+}
 function applyAdmin(){
   document.querySelectorAll('.product').forEach(n=>{
     const id=n.dataset.id,s=ADM[id];
@@ -259,7 +282,7 @@ function applyAdmin(){
     n.dataset.hiddenadm=(s.visible===false||sold||stock<=0||reserved)?'1':'0';
     n.dataset.name=String(s.name||'').toLowerCase();
     n.dataset.code=String(s.code||'').toLowerCase();
-    if(s.collection)n.dataset.cat=s.collection;
+    n.dataset.cat=normalizeCategory(s.category,s.code);
 
     const title=n.querySelector('.info h3,.showCopy h3');
     if(title)title.textContent=s.name||'';
@@ -307,7 +330,7 @@ function applyAdmin(){
 let cart={},favs=JSON.parse(localStorage.getItem('g1319stable_favs')||'[]'),activeCat='all';
 const el=id=>document.getElementById(id);function visibleProducts(){return [...document.querySelectorAll('.product')].filter(x=>x.offsetParent!==null)}
 function setView(v){el('grid').style.display=v==='cards'?'grid':'none';el('showroom').style.display=v==='show'?'grid':'none';el('cardsBtn').classList.toggle('active',v==='cards');el('showBtn').classList.toggle('active',v==='show');localStorage.setItem('g1319stable_view',v);applyFilters()}
-function applyFilters(){const q=el('search').value.toLowerCase().trim();document.querySelectorAll('.product').forEach(x=>{const s=ADM[x.dataset.id]||{};const okText=((s.name||x.dataset.name)+' '+(s.code||x.dataset.code)).toLowerCase().includes(q),okCat=activeCat==='all'||(activeCat==='fav'?favs.includes(x.dataset.id):x.dataset.cat===activeCat),okAdm=x.dataset.hiddenadm!=='1';x.style.display=okText&&okCat&&okAdm?'':'none'});const base=el('grid').style.display==='none'?el('showroom'):el('grid');const count=[...base.querySelectorAll('.product')].filter(x=>x.style.display!=='none').length;el('countText').textContent=count+' modelos disponibles'}
+function applyFilters(){const q=el('search').value.toLowerCase().trim();document.querySelectorAll('.product').forEach(x=>{const s=ADM[x.dataset.id]||{};const okText=((s.name||x.dataset.name)+' '+(s.code||x.dataset.code)).toLowerCase().includes(q),okCat=activeCat==='all'||(activeCat==='fav'?favs.includes(x.dataset.id):normalizeCategory(x.dataset.cat,s.code)===normalizeCategory(activeCat,s.code)),okAdm=x.dataset.hiddenadm!=='1';x.style.display=okText&&okCat&&okAdm?'':'none'});const base=el('grid').style.display==='none'?el('showroom'):el('grid');const count=[...base.querySelectorAll('.product')].filter(x=>x.style.display!=='none').length;el('countText').textContent=count+' modelos disponibles'}
 function addCart(id){if(ADM[id].status==='Vendido'||ADM[id].visible===false||ADM[id].stock<=0)return alert('Producto no disponible.');cart[id]=1;renderCart();openCart()}function openCart(){el('cartDrawer').classList.add('open')}function renderCart(){const ids=Object.keys(cart).filter(id=>ADM[id]&&ADM[id].status!=='Vendido'&&ADM[id].visible!==false);el('cartCount').textContent=ids.length;let total=0;el('cartItems').innerHTML=ids.map(id=>{let s=ADM[id],p=effPrice(id);total+=p;return `<div class="cartItem"><div><b>${s.name}</b><br><small>${s.code}</small></div><div><b>S/ ${p}</b><br><button class="close" onclick="delete cart['${id}'];renderCart()">Quitar</button></div></div>`}).join('')||'<p style="color:var(--muted)">Carrito vacío.</p>';el('total').textContent='S/ '+total}function toggleFav(id,b){favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];localStorage.setItem('g1319stable_favs',JSON.stringify(favs));document.querySelectorAll(`[data-id="${id}"] .icon`).forEach(x=>{if(x.textContent.includes('♡')||x.textContent.includes('♥')){x.textContent=favs.includes(id)?'♥':'♡';x.classList.toggle('fav',favs.includes(id));x.classList.toggle('active',favs.includes(id))}});renderFavs();applyFilters()}function openFavs(){renderFavs();el('favDrawer').classList.add('open')}function renderFavs(){el('favCount').textContent=favs.length;el('favItems').innerHTML=favs.map(id=>{let p=PRODUCTS[id];return `<div class="cartItem"><div><b>${p.name}</b><br><small>${p.code}</small></div><button class="close" onclick="addCart('${id}')">Agregar</button></div>`}).join('')||'<p style="color:var(--muted)">Sin favoritos.</p>'}
 async function shareP(id){let s=ADM[id],txt=`FamPiS · Garage 1319\n${s.name}\nCódigo: ${s.code}\nPrecio: S/ ${effPrice(id)}`;if(navigator.share)try{await navigator.share({title:s.name,text:txt});return}catch(e){}window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank')}function sendWa(){let ids=Object.keys(cart).filter(id=>ADM[id]&&ADM[id].status!=='Vendido'&&ADM[id].visible!==false);if(!ids.length)return alert('Agrega al menos un modelo.');let n=(localStorage.getItem('g1319stable_wa')||'').replace(/\D/g,'');if(!n)return alert('Configura tu WhatsApp desde Administrador.');let total=ids.reduce((s,id)=>s+effPrice(id),0),msg=`🏎️ *PEDIDO FAMPIS · GARAGE 1319*\n\n${ids.map(id=>`• ${ADM[id].name} (${ADM[id].code}) — S/ ${effPrice(id)}`).join('\n')}\n\n💰 Total: S/ ${total}`;window.open('https://wa.me/'+n+'?text='+encodeURIComponent(msg),'_blank')}const GARAGE_SUPABASE_URL="https://oibgknrvobjbywwvwisq.supabase.co";
 let sbClient=null;
@@ -387,7 +410,7 @@ function backupNow(){localStorage.setItem('g1319_backup_'+Date.now(),JSON.string
 function exportNow(){let blob=new Blob([JSON.stringify({ADM,RES,PRO,HIST,wa:localStorage.getItem('g1319stable_wa')||''},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='garage1319-respaldo.json';a.click()}
 function saveWa(){localStorage.setItem('g1319stable_wa',el('waNum').value.replace(/\D/g,''));alert('WhatsApp guardado')}
 function changePass(){let v=el('newPass').value.trim();if(v.length<4)return alert('Mínimo 4 caracteres.');localStorage.setItem('g1319_admin_pass',v);el('newPass').value='';alert('Clave actualizada')}
-document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeCat=b.dataset.cat;applyFilters()});el('search').oninput=applyFilters;el('sort').onchange=()=>{let mode=el('sort').value;['grid','showroom'].forEach(id=>{let box=el(id),arr=[...box.children];arr.sort((a,b)=>{let pa=PRODUCTS[a.dataset.id],pb=PRODUCTS[b.dataset.id];if(mode==='asc')return pa.price-pb.price;if(mode==='desc')return pb.price-pa.price;if(mode==='name')return pa.name.localeCompare(pb.name);return 0});arr.forEach(x=>box.appendChild(x))});applyFilters()};
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeCat=b.dataset.cat==='fav'?'fav':(b.dataset.cat==='all'?'all':normalizeCategory(b.dataset.cat,''));applyFilters()});el('search').oninput=applyFilters;el('sort').onchange=()=>{let mode=el('sort').value;['grid','showroom'].forEach(id=>{let box=el(id),arr=[...box.children];arr.sort((a,b)=>{let pa=PRODUCTS[a.dataset.id],pb=PRODUCTS[b.dataset.id];if(mode==='asc')return pa.price-pb.price;if(mode==='desc')return pb.price-pa.price;if(mode==='name')return pa.name.localeCompare(pb.name);return 0});arr.forEach(x=>box.appendChild(x))});applyFilters()};
 document.querySelectorAll('.adminTab').forEach(b=>b.onclick=()=>tabAdm(b.dataset.tab));persist();applyAdmin();renderAdm();renderCart();renderFavs();setView(localStorage.getItem('g1319stable_view')||'cards');applyFilters();
 </script><script id="garage1319-final-cloud">
 (function(){
@@ -420,7 +443,7 @@ document.querySelectorAll('.adminTab').forEach(b=>b.onclick=()=>tabAdm(b.dataset
     card.dataset.cloudId=String(s.dbId||'');
     card.dataset.name=String(s.name||'').toLowerCase();
     card.dataset.code=String(s.code||'').toLowerCase();
-    card.dataset.cat=s.collection||'Básico';
+    card.dataset.cat=normalizeCategory(s.category,s.code);
     card.innerHTML=`<div class="photo">${s.image?`<img src="${esc(s.image)}" alt="${esc(s.name)}">`:''}<div class="pills"><span class="pill blue">NUEVO</span></div></div><div class="info"><div class="series">${esc(s.collection||'')}</div><h3>${esc(s.name)}</h3><div class="subtitle">${esc(s.description||'')}</div><div class="code">${esc(s.code)}</div><div class="priceRow"><b>S/ ${Number(s.price||0).toFixed(0)}</b><span>${Number(s.stock||0)===1?'Última unidad':`Stock ${Number(s.stock||0)}`}</span></div><div class="actions"><button onclick="addCart('${id}')">🛒 Agregar</button><button class="icon" onclick="toggleFav('${id}',this)">♡</button><button class="icon" onclick="shareP('${id}')">↗</button></div></div>`;
     g.appendChild(card);
 
@@ -431,7 +454,7 @@ document.querySelectorAll('.adminTab').forEach(b=>b.onclick=()=>tabAdm(b.dataset
     sh.dataset.cloudId=String(s.dbId||'');
     sh.dataset.name=String(s.name||'').toLowerCase();
     sh.dataset.code=String(s.code||'').toLowerCase();
-    sh.dataset.cat=s.collection||'Básico';
+    sh.dataset.cat=normalizeCategory(s.category,s.code);
     sh.innerHTML=`<div class="showCopy"><span class="eyebrow">${esc(s.collection||'')}</span><h3>${esc(s.name)}</h3><p>${esc(s.description||s.code)}</p><div class="showPrice">S/ ${Number(s.price||0).toFixed(0)}</div><div class="actions"><button onclick="addCart('${id}')">Agregar al carrito</button><button class="icon" onclick="toggleFav('${id}',this)">♡</button></div></div><div class="showPhoto">${s.image?`<img src="${esc(s.image)}" alt="${esc(s.name)}">`:''}</div>`;
     v.appendChild(sh);
   }
@@ -481,6 +504,7 @@ document.querySelectorAll('.adminTab').forEach(b=>b.onclick=()=>tabAdm(b.dataset
         stock:Number(r.stock||0),
         status:estado==='vendido'?'Vendido':estado==='reservado'?'Reservado':'Disponible',
         visible:r.visible!==false,
+        category:normalizeCategory(r.categoria,r.codigo),
         collection:r.coleccion||'',
         image:r.imagen||'',
         description:r.descripcion||''
@@ -642,7 +666,7 @@ document.querySelectorAll('.adminTab').forEach(b=>b.onclick=()=>tabAdm(b.dataset
 
   window.newProductAdmin=function(){
     ['epId','epName','epCode','epPrice','epCollection','epImage','epDescription'].forEach(x=>{if(qs(x))qs(x).value=''});
-    if(qs('epStock'))qs('epStock').value=1;
+    if(qs('epStock'))qs('epStock').value=1;if(qs('epCategory'))qs('epCategory').value='Básico';
     if(qs('epStatus'))qs('epStatus').value='Disponible';
     if(qs('epVisible'))qs('epVisible').value='true';
   };
@@ -651,7 +675,7 @@ document.querySelectorAll('.adminTab').forEach(b=>b.onclick=()=>tabAdm(b.dataset
   window.editAdm=function(id){
     oldEdit(id);
     const s=ADM[id]||{};
-    if(qs('epCollection'))qs('epCollection').value=s.collection||'';
+    if(qs('epCategory'))qs('epCategory').value=normalizeCategory(s.category,s.code);if(qs('epCollection'))qs('epCollection').value=s.collection||'';
     if(qs('epImage'))qs('epImage').value=s.image||'';
     if(qs('epDescription'))qs('epDescription').value=s.description||'';
   };
@@ -857,6 +881,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const p={
         codigo:document.getElementById("epCode").value.trim(),
         nombre:document.getElementById("epName").value.trim(),
+        categoria:normalizeCategory(document.getElementById("epCategory").value,document.getElementById("epCode").value),
         coleccion:document.getElementById("epCollection").value.trim(),
         precio:Number(document.getElementById("epPrice").value||0),
         stock:Math.max(0,Number(document.getElementById("epStock").value||0)),
@@ -914,7 +939,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(existing){
         existing.name=p.nombre;existing.code=p.codigo;existing.price=p.precio;
         existing.stock=p.stock;existing.status=p.estado==="vendido"?"Vendido":p.estado==="reservado"?"Reservado":"Disponible";
-        existing.visible=p.visible;existing.collection=p.coleccion;existing.image=p.imagen;existing.description=p.descripcion;
+        existing.visible=p.visible;existing.category=p.categoria;existing.collection=p.coleccion;existing.image=p.imagen;existing.description=p.descripcion;
         ADM[id]=existing;
         try{persist()}catch(e){}
         applyAdmin();renderAdm();
@@ -1774,6 +1799,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
   });
 })();
+</script>
+
+
+<script id="garage1319-category-integrity">
+document.addEventListener("DOMContentLoaded",()=>{
+  try{
+    document.querySelectorAll(".product").forEach(n=>{
+      const s=ADM[n.dataset.id]||{};
+      n.dataset.cat=normalizeCategory(s.category||n.dataset.cat,s.code||n.dataset.code);
+    });
+    applyFilters();
+  }catch(e){console.warn("Category integrity",e)}
+});
 </script>
 
 </body></html>
