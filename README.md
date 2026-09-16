@@ -10,6 +10,9 @@ Catálogo móvil de Hot Wheels y diecast con inventario, carrito, pedidos por Wh
 - Pedido transaccional con precio calculado en el servidor.
 - Stock separado al registrar el pedido y restaurado al cancelarlo.
 - Panel administrativo independiente en `/admin/`.
+- Fichas de coleccionista con galería frontal/posterior, escala, empaque, edición, stock, precio y entrega.
+- Tarjetas simplificadas y ventana accesible de “Ver detalles”.
+- Precio promocional calculado también en el servidor al registrar el pedido.
 - RLS, funciones SQL y bucket de imágenes documentados como migración.
 - PWA, SEO, accesibilidad y política de privacidad.
 
@@ -17,11 +20,13 @@ Catálogo móvil de Hot Wheels y diecast con inventario, carrito, pedidos por Wh
 
 1. Crear una rama de respaldo de la versión actualmente publicada.
 2. Ejecutar `supabase/migrations/20260916_garage1319_v2.sql` en un proyecto de prueba.
-3. Crear o invitar al usuario administrador en Supabase Auth.
-4. Insertar su UUID en `public.admin_users` usando la instrucción incluida al final de la migración.
-5. Revisar `assets/js/config.js` y confirmar URL y llave pública de Supabase.
-6. Probar catálogo, pedido, cancelación, confirmación de venta y carga de fotografías.
-7. Publicar la rama `main` con GitHub Pages.
+3. En una base V2 ya existente, ejecutar `supabase/migrations/20260916_collector_product_details.sql`.
+4. Crear o invitar al usuario administrador en Supabase Auth.
+5. Insertar su UUID en `public.admin_users` usando la instrucción incluida al final de la migración principal.
+6. Revisar `assets/js/config.js` y confirmar URL y llave pública de Supabase.
+7. Completar escala, condición, fotografía posterior y entrega desde `/admin/`.
+8. Probar catálogo, detalle, pedido, cancelación, confirmación de venta y carga de fotografías.
+9. Publicar la rama `main` con GitHub Pages.
 
 ## Validación automática
 
@@ -54,4 +59,4 @@ assets/vendor/         Supabase JS fijado en 2.116.0
 supabase/migrations/    Esquema, políticas y funciones
 ```
 
-Las versiones HTML anteriores se retiraron del directorio publicado. Permanecen recuperables desde el historial de Git.
+Las versiones HTML anteriores se conservan como respaldo en el repositorio, pero no intervienen en la página principal.

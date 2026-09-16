@@ -27,5 +27,22 @@ for(const relative of jsFiles){
   catch(error){errors.push(`${relative}: ${error.message}`)}
 }
 
+const storefront=fs.readFileSync(path.join(root,"index.html"),"utf8");
+for(const id of ["productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailAdd"]){
+  if(!storefront.includes(`id="${id}"`))errors.push(`index.html: falta el componente de detalle ${id}`);
+}
+const admin=fs.readFileSync(path.join(root,"admin/index.html"),"utf8");
+for(const id of ["productPromoPrice","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures"]){
+  if(!admin.includes(`id="${id}"`))errors.push(`admin/index.html: falta el campo ${id}`);
+}
+const collectorMigration=path.join(root,"supabase/migrations/20260916_collector_product_details.sql");
+if(!fs.existsSync(collectorMigration))errors.push("falta la migración de fichas de coleccionista");
+else{
+  const sql=fs.readFileSync(collectorMigration,"utf8");
+  for(const column of ["precio_promocional","imagen_posterior","escala","condicion_empaque","tipo_edicion","entrega","caracteristicas"]){
+    if(!sql.includes(column))errors.push(`migración de coleccionista: falta ${column}`);
+  }
+}
+
 if(errors.length){console.error(errors.join("\n"));process.exit(1)}
 console.log("Garage 1319 V2: validación estática correcta.");

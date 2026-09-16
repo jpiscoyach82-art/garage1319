@@ -1,20 +1,256 @@
-<!doctype html><html lang="es-PE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05080d"><meta name="robots" content="noindex,nofollow"><title>Administración | Garage 1319</title><link rel="icon" href="../g1319-192.png"><link rel="stylesheet" href="../assets/css/styles.css"><link rel="stylesheet" href="../assets/css/admin.css"></head><body class="admin-shell">
-  <header class="admin-header"><div class="container"><a class="brand" href="../"><img src="../assets/images/logo.webp" width="48" height="48" alt=""><span><strong>Garage <em>1319</em></strong><small>Administración</small></span></a><div class="admin-header-actions"><span id="cloudStatus" class="connection">Desconectado</span><a class="button secondary" href="../">Ver tienda</a><button class="button secondary" id="logoutButton" type="button" hidden>Salir</button></div></div></header>
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05080d">
+<meta name="robots" content="noindex,nofollow">
+<title>Administración | Garage 1319</title>
+<link rel="icon" href="../g1319-192.png">
+<link rel="stylesheet" href="../assets/css/styles.css?v=4">
+<link rel="stylesheet" href="../assets/css/admin.css?v=4">
+</head>
+<body class="admin-shell">
+  <header class="admin-header">
+<div class="container">
+<a class="brand" href="../">
+<img src="../assets/images/logo.webp" width="48" height="48" alt="">
+<span>
+<strong>Garage <em>1319</em>
+</strong>
+<small>Administración</small>
+</span>
+</a>
+<div class="admin-header-actions">
+<span id="cloudStatus" class="connection">Desconectado</span>
+<a class="button secondary" href="../">Ver tienda</a>
+<button class="button secondary" id="logoutButton" type="button" hidden>Salir</button>
+</div>
+</div>
+</header>
   <main class="container admin-main">
-    <section class="login-card" id="loginSection" aria-labelledby="loginTitle"><p class="eyebrow">Acceso protegido</p><h1 id="loginTitle">Administración</h1><p>Ingresa con el usuario autorizado en Supabase.</p><form id="loginForm"><label>Correo electrónico<input id="loginEmail" type="email" autocomplete="username" required></label><label>Contraseña<input id="loginPassword" type="password" autocomplete="current-password" required></label><p class="form-error" id="loginError" role="alert"></p><button class="button primary full" id="loginButton" type="submit">Ingresar</button></form></section>
+    <section class="login-card" id="loginSection" aria-labelledby="loginTitle">
+<p class="eyebrow">Acceso protegido</p>
+<h1 id="loginTitle">Administración</h1>
+<p>Ingresa con el usuario autorizado en Supabase.</p>
+<form id="loginForm">
+<label>Correo electrónico<input id="loginEmail" type="email" autocomplete="username" required>
+</label>
+<label>Contraseña<input id="loginPassword" type="password" autocomplete="current-password" required>
+</label>
+<p class="form-error" id="loginError" role="alert">
+</p>
+<button class="button primary full" id="loginButton" type="submit">Ingresar</button>
+</form>
+</section>
 
     <section id="adminPanel" hidden>
-      <div class="admin-title"><div><p class="eyebrow">Centro de control</p><h1>Garage 1319</h1></div><button class="button secondary" id="refreshButton" type="button">Actualizar datos</button></div>
-      <nav class="admin-tabs" aria-label="Secciones"><button class="active" type="button" data-tab="dashboard" aria-selected="true">Resumen</button><button type="button" data-tab="products">Productos</button><button type="button" data-tab="orders">Pedidos</button><button type="button" data-tab="business">Negocio</button></nav>
+      <div class="admin-title">
+<div>
+<p class="eyebrow">Centro de control</p>
+<h1>Garage 1319</h1>
+</div>
+<button class="button secondary" id="refreshButton" type="button">Actualizar datos</button>
+</div>
+      <nav class="admin-tabs" aria-label="Secciones">
+<button class="active" type="button" data-tab="dashboard" aria-selected="true">Resumen</button>
+<button type="button" data-tab="products">Productos</button>
+<button type="button" data-tab="orders">Pedidos</button>
+<button type="button" data-tab="business">Negocio</button>
+</nav>
 
-      <section class="admin-view active" id="tab-dashboard"><div class="metric-grid"><article><span>Productos publicados</span><strong id="metricProducts">0</strong></article><article><span>Unidades en stock</span><strong id="metricStock">0</strong></article><article><span>Pedidos pendientes</span><strong id="metricPending">0</strong></article><article><span>Ventas registradas</span><strong id="metricSales">0</strong></article></div><div class="admin-card"><h2>Stock bajo</h2><div id="lowStockList"></div></div><div class="admin-card"><h2>Pedidos recientes</h2><div id="recentOrders"></div></div></section>
+      <section class="admin-view active" id="tab-dashboard">
+<div class="metric-grid">
+<article>
+<span>Productos publicados</span>
+<strong id="metricProducts">0</strong>
+</article>
+<article>
+<span>Unidades en stock</span>
+<strong id="metricStock">0</strong>
+</article>
+<article>
+<span>Pedidos pendientes</span>
+<strong id="metricPending">0</strong>
+</article>
+<article>
+<span>Ventas registradas</span>
+<strong id="metricSales">0</strong>
+</article>
+</div>
+<div class="admin-card">
+<h2>Stock bajo</h2>
+<div id="lowStockList">
+</div>
+</div>
+<div class="admin-card">
+<h2>Pedidos recientes</h2>
+<div id="recentOrders">
+</div>
+</div>
+</section>
 
-      <section class="admin-view" id="tab-products"><div class="admin-two-columns"><form class="admin-card sticky-card" id="productForm"><div class="card-heading"><div><p class="eyebrow">Inventario</p><h2 id="productFormTitle">Nuevo producto</h2></div><button class="text-button" id="resetProduct" type="button">Limpiar</button></div><input id="productId" type="hidden"><label>Nombre<input id="productName" required></label><label>Código<input id="productCode" required></label><div class="form-grid"><label>Precio<input id="productPrice" type="number" min="0" step="0.01" required></label><label>Stock<input id="productStock" type="number" min="0" step="1" required></label></div><div class="form-grid"><label>Categoría<select id="productCategory"><option>Básico</option><option>Premium</option><option>Silver Series</option></select></label><label>Estado<select id="productStatus"><option value="disponible">Disponible</option><option value="reservado">Reservado</option><option value="vendido">Vendido</option></select></label></div><label>Colección<input id="productCollection"></label><label>Descripción<textarea id="productDescription" rows="3"></textarea></label><label>URL de imagen<input id="productImage" type="url" placeholder="https://..."></label><label class="file-label">Subir fotografía<input id="productImageFile" type="file" accept="image/jpeg,image/png,image/webp"><span>La imagen se optimizará antes de subir.</span></label><label class="toggle"><input id="productVisible" type="checkbox" checked><span>Visible en el catálogo</span></label><p class="form-error" id="productError" role="alert"></p><button class="button primary full" id="saveProduct" type="submit">Guardar producto</button><button class="button danger full" id="deleteProduct" type="button" hidden>Eliminar producto</button></form><div class="admin-card"><div class="card-heading"><h2>Productos</h2><label class="compact-search">Buscar<input id="productSearch" type="search"></label></div><div id="productList" class="admin-list"></div></div></div></section>
+      <section class="admin-view" id="tab-products">
+<div class="admin-two-columns">
+<form class="admin-card sticky-card" id="productForm">
+<div class="card-heading">
+<div>
+<p class="eyebrow">Inventario</p>
+<h2 id="productFormTitle">Nuevo producto</h2>
+</div>
+<button class="text-button" id="resetProduct" type="button">Limpiar</button>
+</div>
+<p class="schema-notice" id="collectorSchemaNotice" hidden>La migración de fichas de coleccionista está pendiente en Supabase. El catálogo seguirá funcionando, pero estos campos nuevos no podrán guardarse todavía.</p>
+<input id="productId" type="hidden">
+<label>Nombre<input id="productName" required>
+</label>
+<label>Código<input id="productCode" required>
+</label>
+<div class="form-grid">
+<label>Precio normal<input id="productPrice" type="number" min="0" step="0.01" required>
+</label>
+<label>Precio promocional <span class="optional">Opcional</span><input id="productPromoPrice" type="number" min="0" step="0.01">
+</label>
+</div>
+<div class="form-grid">
+<label>Stock real<input id="productStock" type="number" min="0" step="1" required>
+</label>
+<label>Escala<input id="productScale" placeholder="1:64">
+</label>
+</div>
+<div class="form-grid">
+<label>Categoría<select id="productCategory">
+<option>Básico</option>
+<option>Premium</option>
+<option>Silver Series</option>
+<option>Edición especial</option>
+</select>
+</label>
+<label>Estado<select id="productStatus">
+<option value="disponible">Disponible</option>
+<option value="reservado">Reservado</option>
+<option value="vendido">Vendido</option>
+</select>
+</label>
+</div>
+<div class="form-grid">
+<label>Tipo de edición<select id="productEdition">
+<option>Básico</option>
+<option>Premium</option>
+<option>Silver Series</option>
+<option>Edición especial</option>
+<option>Exclusivo</option>
+</select>
+</label>
+<label>Condición del empaque<select id="productCondition">
+<option value="">Por confirmar</option>
+<option>Sellado</option>
+<option>Excelente</option>
+<option>Bueno</option>
+<option>Con detalles</option>
+<option>Sin empaque</option>
+</select>
+</label>
+</div>
+<label>Colección<input id="productCollection">
+</label>
+<label>Descripción<textarea id="productDescription" rows="3">
+</textarea>
+</label>
+<label>Características separadas por comas<input id="productFeatures" placeholder="Real Riders, Metal/Metal, 2026">
+</label>
+<label>Entrega disponible<input id="productDelivery" placeholder="Recojo o envío coordinado por WhatsApp">
+</label>
+<label>URL de fotografía frontal<input id="productImage" type="url" placeholder="https://...">
+</label>
+<label class="file-label">Subir fotografía frontal<input id="productImageFile" type="file" accept="image/jpeg,image/png,image/webp">
+<span>Se optimizará automáticamente en WebP.</span>
+</label>
+<label>URL de fotografía posterior<input id="productBackImage" type="url" placeholder="https://...">
+</label>
+<label class="file-label">Subir fotografía posterior<input id="productBackImageFile" type="file" accept="image/jpeg,image/png,image/webp">
+<span>Opcional, pero recomendada para coleccionistas.</span>
+</label>
+<label class="toggle">
+<input id="productVisible" type="checkbox" checked>
+<span>Visible en el catálogo</span>
+</label>
+<p class="form-error" id="productError" role="alert">
+</p>
+<button class="button primary full" id="saveProduct" type="submit">Guardar producto</button>
+<button class="button danger full" id="deleteProduct" type="button" hidden>Eliminar producto</button>
+</form>
+<div class="admin-card">
+<div class="card-heading">
+<h2>Productos</h2>
+<label class="compact-search">Buscar<input id="productSearch" type="search">
+</label>
+</div>
+<div id="productList" class="admin-list">
+</div>
+</div>
+</div>
+</section>
 
-      <section class="admin-view" id="tab-orders"><div class="admin-card"><div class="card-heading"><h2>Pedidos</h2><label>Estado<select id="orderFilter"><option value="">Todos</option><option value="pendiente">Pendientes</option><option value="confirmado">Confirmados</option><option value="vendido">Vendidos</option><option value="cancelado">Cancelados</option></select></label></div><div id="orderList" class="admin-list"></div></div></section>
+      <section class="admin-view" id="tab-orders">
+<div class="admin-card">
+<div class="card-heading">
+<h2>Pedidos</h2>
+<label>Estado<select id="orderFilter">
+<option value="">Todos</option>
+<option value="pendiente">Pendientes</option>
+<option value="confirmado">Confirmados</option>
+<option value="vendido">Vendidos</option>
+<option value="cancelado">Cancelados</option>
+</select>
+</label>
+</div>
+<div id="orderList" class="admin-list">
+</div>
+</div>
+</section>
 
-      <section class="admin-view" id="tab-business"><form class="admin-card business-form" id="businessForm"><p class="eyebrow">Identidad y contacto</p><h2>Datos del negocio</h2><div class="form-grid"><label>Nombre comercial<input id="businessName" required></label><label>Subtítulo<input id="businessSubtitle"></label></div><div class="form-grid"><label>WhatsApp<input id="businessWhatsapp" inputmode="tel" required></label><label>Moneda<input id="businessCurrency" value="S/"></label></div><label>Instagram<input id="businessInstagram" type="url"></label><label>Información de entrega<textarea id="businessDelivery" rows="3"></textarea></label><div class="form-grid"><label>Color principal<input id="businessPrimary" type="color" value="#ffd400"></label><label>Color de fondo<input id="businessBackground" type="color" value="#05080d"></label></div><p class="form-error" id="businessError" role="alert"></p><button class="button primary" type="submit">Guardar configuración</button></form></section>
+      <section class="admin-view" id="tab-business">
+<form class="admin-card business-form" id="businessForm">
+<p class="eyebrow">Identidad y contacto</p>
+<h2>Datos del negocio</h2>
+<div class="form-grid">
+<label>Nombre comercial<input id="businessName" required>
+</label>
+<label>Subtítulo<input id="businessSubtitle">
+</label>
+</div>
+<div class="form-grid">
+<label>WhatsApp<input id="businessWhatsapp" inputmode="tel" required>
+</label>
+<label>Moneda<input id="businessCurrency" value="S/">
+</label>
+</div>
+<label>Instagram<input id="businessInstagram" type="url">
+</label>
+<label>Información de entrega<textarea id="businessDelivery" rows="3">
+</textarea>
+</label>
+<div class="form-grid">
+<label>Color principal<input id="businessPrimary" type="color" value="#ffd400">
+</label>
+<label>Color de fondo<input id="businessBackground" type="color" value="#05080d">
+</label>
+</div>
+<p class="form-error" id="businessError" role="alert">
+</p>
+<button class="button primary" type="submit">Guardar configuración</button>
+</form>
+</section>
     </section>
-  </main><div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="../assets/vendor/supabase-2.116.0.min.js" defer></script><script src="../assets/js/config.js" defer></script><script src="../assets/js/admin.js" defer></script>
-</body></html>
+  </main>
+<div class="toast" id="toast" role="status" aria-live="polite">
+</div>
+  <script src="../assets/vendor/supabase-2.116.0.min.js" defer>
+</script>
+<script src="../assets/js/config.js" defer>
+</script>
+<script src="../assets/js/admin.js?v=4" defer>
+</script>
+</body>
+</html>

@@ -12,6 +12,7 @@ create table if not exists public.productos (
   codigo text not null unique,
   nombre text not null,
   precio numeric(12,2) not null check (precio >= 0),
+  precio_promocional numeric(12,2) check (precio_promocional is null or (precio_promocional >= 0 and precio_promocional < precio)),
   stock integer not null default 0 check (stock >= 0),
   estado text not null default 'disponible' check (estado in ('disponible','reservado','vendido')),
   visible boolean not null default true,
@@ -19,6 +20,12 @@ create table if not exists public.productos (
   coleccion text not null default '',
   descripcion text not null default '',
   imagen text not null default '',
+  imagen_posterior text not null default '',
+  escala text not null default '',
+  condicion_empaque text not null default '',
+  tipo_edicion text not null default '',
+  entrega text not null default '',
+  caracteristicas text[] not null default '{}',
   orden integer not null default 0,
   creado_en timestamptz not null default now(),
   actualizado_en timestamptz not null default now()
@@ -139,7 +146,7 @@ returns table(codigo text,total numeric,pedido_id bigint)
 language plpgsql security definer set search_path=public,pg_temp as $$
 declare
   v_cliente_id bigint; v_pedido_id bigint; v_codigo text; v_total numeric(12,2):=0;
-  v_item jsonb; v_producto public.productos%rowtype; v_cantidad integer; v_subtotal numeric(12,2);
+  v_item jsonb; v_producto public.productos%rowtype; v_cantidad integer; v_subtotal numeric(12,2); v_precio numeric(12,2);
   v_nombre text:=trim(coalesce(p_cliente->>'nombre','')); v_telefono text:=regexp_replace(coalesce(p_cliente->>'telefono',''),'\D','','g');
   v_email text:=trim(coalesce(p_cliente->>'email','')); v_direccion text:=trim(coalesce(p_cliente->>'direccion',''));
 begin
@@ -164,9 +171,15 @@ begin
     select * into v_producto from public.productos where id=(v_item->>'producto_id')::bigint and visible=true for update;
     if not found then raise exception 'Producto no disponible'; end if;
     if v_producto.stock<v_cantidad then raise exception 'Stock insuficiente para %',v_producto.nombre; end if;
-    v_subtotal:=v_producto.precio*v_cantidad; v_total:=v_total+v_subtotal;
+    v_precio:=coalesce(v_producto.precio_promocional,v_producto.precio);
+    select case when p.tipo='percent' then greatest(0,round(v_producto.precio*(1-p.valor/100),2)) else p.valor end
+      into v_precio from public.promociones p
+      where p.producto_id=v_producto.id and p.activa=true and (p.fin is null or p.fin>now())
+      order by p.id desc limit 1;
+    v_precio:=coalesce(v_precio,v_producto.precio_promocional,v_producto.precio);
+    v_subtotal:=v_precio*v_cantidad; v_total:=v_total+v_subtotal;
     insert into public.pedido_items(pedido_id,producto_id,producto_nombre,codigo,cantidad,precio_unitario,subtotal)
-    values(v_pedido_id,v_producto.id,v_producto.nombre,v_producto.codigo,v_cantidad,v_producto.precio,v_subtotal);
+    values(v_pedido_id,v_producto.id,v_producto.nombre,v_producto.codigo,v_cantidad,v_precio,v_subtotal);
     update public.productos set stock=stock-v_cantidad,estado=case when stock-v_cantidad<=0 then 'vendido' else 'disponible' end,visible=(stock-v_cantidad>0),actualizado_en=now() where id=v_producto.id;
   end loop;
   update public.pedidos set total=v_total where id=v_pedido_id;

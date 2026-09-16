@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://jpiscoyach82-art.github.io/garage1319/g1319-512.png">
   <link rel="icon" href="g1319-192.png" sizes="192x192"><link rel="apple-touch-icon" href="g1319-192.png">
   <link rel="manifest" href="manifest.webmanifest"><link rel="preload" href="assets/images/logo.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"OnlineStore","name":"Garage 1319","url":"https://jpiscoyach82-art.github.io/garage1319/","logo":"https://jpiscoyach82-art.github.io/garage1319/g1319-512.png","description":"Hot Wheels y diecast seleccionados para coleccionistas.","currenciesAccepted":"PEN"}</script>
 </head>
 <body>
@@ -55,6 +55,32 @@
     <section class="order-success" id="orderSuccess" hidden tabindex="-1"><span class="success-icon">✓</span><h3>Pedido registrado</h3><p>Tu código es <strong id="orderCode"></strong>.</p><a class="button whatsapp full" id="openWhatsapp" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a><button class="button secondary full" id="newOrder" type="button">Crear otro pedido</button></section>
   </div></aside>
 
+  <div class="detail-backdrop" id="detailBackdrop" hidden></div>
+  <section class="product-detail-modal" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="detailName" aria-hidden="true" hidden>
+    <button class="detail-close close-button" id="detailClose" type="button" aria-label="Cerrar detalle">×</button>
+    <div class="detail-gallery">
+      <div class="detail-stage"><img id="detailImage" src="g1319-512.png" width="700" height="850" alt=""></div>
+      <div class="detail-thumbnails" id="detailThumbnails" role="group" aria-label="Fotografías del producto"></div>
+    </div>
+    <div class="detail-copy">
+      <p class="eyebrow" id="detailCollection"></p>
+      <h2 id="detailName"></h2>
+      <p class="detail-description" id="detailDescription"></p>
+      <div class="detail-price" id="detailPrice"></div>
+      <dl class="collector-specs">
+        <div><dt>Código</dt><dd id="detailCode"></dd></div>
+        <div><dt>Escala</dt><dd id="detailScale"></dd></div>
+        <div><dt>Empaque</dt><dd id="detailCondition"></dd></div>
+        <div><dt>Edición</dt><dd id="detailEdition"></dd></div>
+        <div><dt>Stock real</dt><dd id="detailStock"></dd></div>
+        <div><dt>Entrega</dt><dd id="detailDelivery"></dd></div>
+      </dl>
+      <div class="detail-characteristics" id="detailCharacteristics"></div>
+      <p class="detail-photo-note" id="detailPhotoNote" hidden>La fotografía posterior está pendiente de registro.</p>
+      <div class="detail-actions"><button class="button primary" id="detailAdd" type="button">Agregar al carrito</button><button class="button secondary" id="detailFavorite" type="button">Guardar favorito</button><button class="button secondary" id="detailShare" type="button">Compartir</button></div>
+    </div>
+  </section>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div><noscript><p class="noscript">Necesitas activar JavaScript para ver el catálogo y registrar pedidos.</p></noscript>
-  <script src="assets/vendor/supabase-2.116.0.min.js" defer></script><script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script>
+  <script src="assets/vendor/supabase-2.116.0.min.js" defer></script><script src="assets/js/config.js" defer></script><script src="assets/js/data.js?v=4" defer></script><script src="assets/js/app.js?v=4" defer></script>
 </body></html>
