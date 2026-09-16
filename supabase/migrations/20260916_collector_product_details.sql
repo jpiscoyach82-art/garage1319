@@ -27,8 +27,8 @@ begin
 end $$;
 
 create or replace function public.crear_pedido(p_cliente jsonb,p_items jsonb,p_notas text default '')
-returns table(codigo text,total numeric,pedido_id bigint)
-language plpgsql security definer set search_path=public,pg_temp as $$
+returns jsonb
+language plpgsql security definer set search_path='' as $$
 declare
   v_cliente_id bigint; v_pedido_id bigint; v_codigo text; v_total numeric(12,2):=0;
   v_item jsonb; v_producto public.productos%rowtype; v_cantidad integer;
@@ -57,36 +57,41 @@ begin
     v_cantidad:=greatest(0,coalesce((v_item->>'cantidad')::integer,0));
     if v_cantidad<1 or v_cantidad>20 then raise exception 'Cantidad inválida'; end if;
     select * into v_producto from public.productos
-      where id=(v_item->>'producto_id')::bigint and visible=true for update;
+      where id=(v_item->>'producto_id')::bigint
+        and visible=true
+        and lower(coalesce(estado,'disponible'))<>'vendido'
+      for update;
     if not found then raise exception 'Producto no disponible'; end if;
     if v_producto.stock<v_cantidad then raise exception 'Stock insuficiente para %',v_producto.nombre; end if;
 
     v_precio:=coalesce(v_producto.precio_promocional,v_producto.precio);
-    select case
-      when p.tipo='percent' then greatest(0,round(v_producto.precio*(1-p.valor/100),2))
-      else p.valor
-    end into v_precio
-    from public.promociones p
-    where p.producto_id=v_producto.id and p.activa=true and (p.fin is null or p.fin>now())
-    order by p.id desc limit 1;
-    v_precio:=coalesce(v_precio,v_producto.precio_promocional,v_producto.precio);
+    select least(
+      v_precio,
+      coalesce((
+        select case
+          when p.tipo='percent' then greatest(0,round(v_producto.precio*(1-p.valor/100),2))
+          else p.valor
+        end
+        from public.promociones p
+        where p.producto_id=v_producto.id
+          and p.activa=true
+          and (p.inicio is null or p.inicio<=now())
+          and (p.fin is null or p.fin>now())
+        order by p.id desc
+        limit 1
+      ),v_precio)
+    ) into v_precio;
     v_subtotal:=v_precio*v_cantidad;
     v_total:=v_total+v_subtotal;
 
     insert into public.pedido_items(pedido_id,producto_id,producto_nombre,codigo,cantidad,precio_unitario,subtotal)
     values(v_pedido_id,v_producto.id,v_producto.nombre,v_producto.codigo,v_cantidad,v_precio,v_subtotal);
-    update public.productos
-      set stock=stock-v_cantidad,
-          estado=case when stock-v_cantidad<=0 then 'vendido' else 'disponible' end,
-          visible=(stock-v_cantidad>0),actualizado_en=now()
-      where id=v_producto.id;
   end loop;
 
-  update public.pedidos set total=v_total where id=v_pedido_id;
+  update public.pedidos set total=v_total,actualizado_en=now() where id=v_pedido_id;
   insert into public.historial(accion,detalle) values('Pedido creado',v_codigo);
-  return query select v_codigo,v_total,v_pedido_id;
+  return jsonb_build_object('codigo',v_codigo,'total',v_total,'pedido_id',v_pedido_id);
 end $$;
 
 revoke all on function public.crear_pedido(jsonb,jsonb,text) from public;
 grant execute on function public.crear_pedido(jsonb,jsonb,text) to anon,authenticated;
-
