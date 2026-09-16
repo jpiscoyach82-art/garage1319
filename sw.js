@@ -1,4 +1,4 @@
-const CACHE="garage1319-v2-20260916";
+const CACHE="garage1319-v2-20260916-2";
 const CORE=["./","./index.html","./privacidad.html","./manifest.webmanifest","./g1319-192.png","./g1319-512.png","./assets/css/styles.css","./assets/js/config.js","./assets/js/data.js","./assets/js/app.js","./assets/vendor/supabase-2.116.0.min.js","./assets/images/logo.webp","./assets/images/products/mclaren-p1.webp"];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
