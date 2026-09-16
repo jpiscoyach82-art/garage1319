@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Sitemap: https://jpiscoyach82-art.github.io/garage1319/sitemap.xml

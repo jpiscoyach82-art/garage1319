@@ -1,24 +1,8 @@
 {
-  "name": "Garage 1319",
-  "short_name": "Garage 1319",
-  "description": "Catálogo, inventario, pedidos y ventas.",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#02070c",
-  "theme_color": "#07111b",
-  "icons": [
-    {
-      "src": "g1319-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "g1319-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ]
+  "id":"./","name":"Garage 1319","short_name":"Garage 1319",
+  "description":"Catálogo de Hot Wheels y diecast para coleccionistas.","lang":"es-PE",
+  "start_url":"./","scope":"./","display":"standalone","orientation":"any",
+  "background_color":"#05080d","theme_color":"#05080d","categories":["shopping","lifestyle"],
+  "icons":[{"src":"g1319-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"g1319-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}],
+  "shortcuts":[{"name":"Ver catálogo","url":"./#catalogo","icons":[{"src":"g1319-192.png","sizes":"192x192"}]},{"name":"Administrar","url":"./admin/","icons":[{"src":"g1319-192.png","sizes":"192x192"}]}]
 }

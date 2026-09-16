@@ -1,0 +1,6 @@
+{
+  "name":"garage1319",
+  "version":"2.0.0",
+  "private":true,
+  "scripts":{"test":"node tests/static-check.mjs"}
+}
