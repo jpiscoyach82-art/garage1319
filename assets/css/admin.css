@@ -55,6 +55,13 @@
 .empty-admin{color:var(--muted);text-align:center;padding:30px}
 .low-stock-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:9px 0}
 .low-stock-row strong{color:var(--warning)}
+.low-stock-row small{display:block;color:var(--muted);font-weight:500}
+.analytics-funnel{display:grid;gap:10px;margin-bottom:24px}
+.analytics-funnel>div{display:grid;grid-template-columns:90px 1fr 46px;gap:10px;align-items:center}
+.analytics-funnel span{color:var(--muted);font-size:.8rem;font-weight:800}
+.analytics-funnel i{display:block;height:11px;border-radius:999px;background:#08131e;overflow:hidden}
+.analytics-funnel b{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--brand-2),var(--brand))}
+.analytics-funnel strong{text-align:right;color:var(--brand)}
 
 @media(max-width:900px){.metric-grid{grid-template-columns:repeat(2,1fr)}
 .admin-two-columns{grid-template-columns:1fr}

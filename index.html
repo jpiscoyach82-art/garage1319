@@ -15,11 +15,12 @@
   <meta property="og:image" content="https://jpiscoyach82-art.github.io/garage1319/g1319-512.png">
   <link rel="icon" href="g1319-192.png" sizes="192x192"><link rel="apple-touch-icon" href="g1319-192.png">
   <link rel="manifest" href="manifest.webmanifest"><link rel="preload" href="assets/images/logo.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"OnlineStore","name":"Garage 1319","url":"https://jpiscoyach82-art.github.io/garage1319/","logo":"https://jpiscoyach82-art.github.io/garage1319/g1319-512.png","description":"Hot Wheels y diecast seleccionados para coleccionistas.","currenciesAccepted":"PEN"}</script>
 </head>
 <body>
   <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+  <div class="sales-banner" id="sales-banner" role="region" aria-label="Compra local"><div class="container"><strong>Entrega en Ferreñafe y Chiclayo</strong><span>Stock real · Yape, Plin o efectivo · Atención por WhatsApp</span><a id="bannerWhatsapp" href="#catalogo">Consultar ahora</a></div></div>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="./" aria-label="Garage 1319, inicio"><img id="brandLogo" src="assets/images/logo.webp" width="56" height="56" alt="" decoding="async"><span><strong id="brandName">Garage <em>1319</em></strong><small id="brandSubtitle">FamPiS · Diecast Collectibles</small></span></a>
     <nav class="header-actions" aria-label="Acciones del catálogo"><button class="icon-button" id="favoritesButton" type="button" aria-label="Abrir favoritos">♡ <span id="favoriteCount">0</span></button><button class="icon-button cart-button" id="cartButton" type="button" aria-label="Abrir carrito">Carrito <span id="cartCount">0</span></button></nav>
@@ -27,9 +28,17 @@
 
   <main>
     <section class="hero container" aria-labelledby="heroTitle">
-      <div class="hero-copy"><p class="eyebrow">Coleccionables seleccionados</p><h1 id="heroTitle">Pasión en <span>escala</span></h1><p id="heroText">Hot Wheels y diecast con stock real. Elige tus modelos, registra tu pedido y coordina la entrega por WhatsApp.</p><div class="hero-actions"><a class="button primary" href="#catalogo">Ver catálogo</a><a class="button secondary" id="heroWhatsapp" href="#catalogo">Consultar disponibilidad</a></div><ul class="trust-list" aria-label="Ventajas"><li>Stock actualizado</li><li>Atención directa</li><li>Pedido sin pago en línea</li></ul></div>
+      <div class="hero-copy"><p class="eyebrow">Coleccionables originales en Lambayeque</p><h1 id="heroTitle">Pasión en <span>escala</span></h1><p id="heroText">Hot Wheels y diecast con stock real. Compra directo por WhatsApp y coordina entrega o recojo en Ferreñafe y Chiclayo.</p><div class="hero-actions"><a class="button primary" href="#catalogo">Ver modelos disponibles</a><a class="button whatsapp" id="heroWhatsapp" href="#catalogo">Comprar por WhatsApp</a></div><ul class="trust-list" aria-label="Ventajas"><li>Productos originales</li><li>Fotos y stock reales</li><li>Atención directa</li></ul></div>
       <div class="hero-visual" aria-hidden="true"><span class="hero-glow"></span><img src="assets/images/products/mclaren-p1.webp" width="600" height="600" alt="" fetchpriority="high"></div>
     </section>
+
+    <section class="trust-panel container" aria-label="Información para comprar con confianza">
+      <article><span class="trust-icon" aria-hidden="true">✓</span><div><strong>Stock comprobado</strong><p>Las unidades disponibles se actualizan desde nuestro inventario.</p></div></article>
+      <article><span class="trust-icon" aria-hidden="true">⌖</span><div><strong>Compra local</strong><p>Coordinamos entrega o recojo en Ferreñafe y Chiclayo.</p></div></article>
+      <article><span class="trust-icon" aria-hidden="true">S/</span><div><strong>Pago coordinado</strong><p>Paga por Yape, Plin o efectivo después de confirmar.</p></div></article>
+    </section>
+
+    <section class="combo-banner container" aria-labelledby="comboTitle"><div><p class="eyebrow">Arma tu colección</p><h2 id="comboTitle">¿Buscas varios modelos?</h2><p>Selecciona tus favoritos y solicita una propuesta de combo directamente por WhatsApp.</p></div><a class="button primary" id="comboWhatsapp" href="#catalogo">Pedir propuesta de combo</a></section>
 
     <section class="catalog-section container" id="catalogo" aria-labelledby="catalogTitle">
       <div class="section-heading"><div><p class="eyebrow">Explora la colección</p><h2 id="catalogTitle">Catálogo <span>Garage 1319</span></h2></div><p id="resultCount" role="status" aria-live="polite">Cargando modelos…</p></div>
@@ -41,7 +50,7 @@
       <div id="emptyState" class="empty-state" hidden><h3>No encontramos modelos</h3><p>Prueba otra búsqueda o categoría.</p><button class="button secondary" id="clearFilters" type="button">Limpiar filtros</button></div>
     </section>
 
-    <section class="service-strip" aria-label="Información de compra"><div class="container service-grid"><article><strong>1. Elige</strong><span>Agrega tus modelos al carrito.</span></article><article><strong>2. Registra</strong><span>Recibe un código de pedido.</span></article><article><strong>3. Coordina</strong><span>Confirma pago y entrega por WhatsApp.</span></article></div></section>
+    <section class="service-strip" aria-labelledby="howTitle"><div class="container"><div class="how-heading"><p class="eyebrow">Compra fácil</p><h2 id="howTitle">Cómo comprar</h2></div><div class="service-grid"><article><b>01</b><strong>Elige tu modelo</strong><span>Revisa precio, empaque, fotos y stock real.</span></article><article><b>02</b><strong>Escríbenos</strong><span>Usa “Comprar por WhatsApp” o arma un carrito.</span></article><article><b>03</b><strong>Coordina</strong><span>Confirma pago y entrega en Ferreñafe o Chiclayo.</span></article></div></div></section>
   </main>
 
   <footer class="site-footer"><div class="container footer-grid"><div><strong id="footerName">Garage 1319</strong><p id="deliveryText">Coleccionables seleccionados y atención personalizada.</p></div><div><strong>Compra segura</strong><p>El pedido no implica un cobro automático. Coordinamos disponibilidad, pago y entrega contigo.</p></div><div class="footer-links"><a id="footerWhatsapp" href="#catalogo">WhatsApp</a><a id="instagramLink" href="#" hidden>Instagram</a><a href="privacidad.html">Privacidad</a><a href="admin/">Acceso administrativo</a></div></div><p class="copyright">© <span id="year"></span> Garage 1319 · FamPiS</p></footer>
@@ -77,10 +86,11 @@
       </dl>
       <div class="detail-characteristics" id="detailCharacteristics"></div>
       <p class="detail-photo-note" id="detailPhotoNote" hidden>La fotografía posterior está pendiente de registro.</p>
-      <div class="detail-actions"><button class="button primary" id="detailAdd" type="button">Agregar al carrito</button><button class="button secondary" id="detailFavorite" type="button">Guardar favorito</button><button class="button secondary" id="detailShare" type="button">Compartir</button></div>
+      <div class="detail-actions"><button class="button whatsapp" id="detailWhatsapp" type="button">Comprar por WhatsApp</button><button class="button secondary" id="detailAdd" type="button">Agregar al carrito</button><button class="button secondary" id="detailFavorite" type="button">Guardar favorito</button><button class="button secondary" id="detailShare" type="button">Compartir</button></div>
     </div>
   </section>
 
+  <a class="floating-whatsapp" id="floatingWhatsapp" href="#catalogo" aria-label="Consultar por WhatsApp"><span aria-hidden="true">WA</span><strong>Comprar</strong></a>
   <div class="toast" id="toast" role="status" aria-live="polite"></div><noscript><p class="noscript">Necesitas activar JavaScript para ver el catálogo y registrar pedidos.</p></noscript>
-  <script src="assets/vendor/supabase-2.116.0.min.js" defer></script><script src="assets/js/config.js" defer></script><script src="assets/js/data.js?v=4" defer></script><script src="assets/js/app.js?v=4" defer></script>
+  <script src="assets/vendor/supabase-2.116.0.min.js" defer></script><script src="assets/js/config.js" defer></script><script src="assets/js/data.js?v=5" defer></script><script src="assets/js/app.js?v=5" defer></script>
 </body></html>

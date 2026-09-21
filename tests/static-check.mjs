@@ -28,7 +28,7 @@ for(const relative of jsFiles){
 }
 
 const storefront=fs.readFileSync(path.join(root,"index.html"),"utf8");
-for(const id of ["productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailAdd"]){
+for(const id of ["sales-banner","productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailAdd","floatingWhatsapp"]){
   if(!storefront.includes(`id="${id}"`))errors.push(`index.html: falta el componente de detalle ${id}`);
 }
 const admin=fs.readFileSync(path.join(root,"admin/index.html"),"utf8");
