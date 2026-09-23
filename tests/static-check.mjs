@@ -28,9 +28,16 @@ for(const relative of jsFiles){
 }
 
 const storefront=fs.readFileSync(path.join(root,"index.html"),"utf8");
-for(const id of ["sales-banner","productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailAdd","floatingWhatsapp"]){
+for(const id of ["sales-banner","productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailAdd","floatingWhatsapp","catalogPagination"]){
   if(!storefront.includes(`id="${id}"`))errors.push(`index.html: falta el componente de detalle ${id}`);
 }
+const storefrontApp=fs.readFileSync(path.join(root,"assets/js/app.js"),"utf8");
+const storefrontCss=fs.readFileSync(path.join(root,"assets/css/styles.css"),"utf8");
+if(!storefront.includes('data-category="sold"'))errors.push("index.html: falta el filtro de vendidos");
+if(!storefrontApp.includes("pageSize:10"))errors.push("app.js: la paginación no está configurada en 10 productos");
+if(!storefrontApp.includes("function renderPagination"))errors.push("app.js: falta renderPagination");
+if(storefrontApp.includes('.gt("stock",0)'))errors.push("app.js: la consulta todavía excluye los productos vendidos");
+if(!storefrontCss.includes(".sold-ribbon"))errors.push("styles.css: falta la banda de producto vendido");
 const admin=fs.readFileSync(path.join(root,"admin/index.html"),"utf8");
 for(const id of ["productPromoPrice","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures"]){
   if(!admin.includes(`id="${id}"`))errors.push(`admin/index.html: falta el campo ${id}`);
