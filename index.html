@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://jpiscoyach82-art.github.io/garage1319/g1319-512.png">
   <link rel="icon" href="g1319-192.png" sizes="192x192"><link rel="apple-touch-icon" href="g1319-192.png">
   <link rel="manifest" href="manifest.webmanifest"><link rel="preload" href="assets/images/logo.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=7">
+  <link rel="stylesheet" href="assets/css/styles.css?v=8">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"OnlineStore","name":"Garage 1319","url":"https://jpiscoyach82-art.github.io/garage1319/","logo":"https://jpiscoyach82-art.github.io/garage1319/g1319-512.png","description":"Hot Wheels y diecast seleccionados para coleccionistas.","currenciesAccepted":"PEN"}</script>
 </head>
 <body>
@@ -69,6 +69,12 @@
     <section class="order-success" id="orderSuccess" hidden tabindex="-1"><span class="success-icon">✓</span><h3>Pedido registrado</h3><p>Tu código es <strong id="orderCode"></strong>.</p><a class="button whatsapp full" id="openWhatsapp" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a><button class="button secondary full" id="newOrder" type="button">Crear otro pedido</button></section>
   </div></aside>
 
+  <aside class="drawer" id="reservationDrawer" role="dialog" aria-modal="true" aria-labelledby="reservationTitle" aria-hidden="true"><div class="drawer-header"><div><p class="eyebrow">Separación por 24 horas</p><h2 id="reservationTitle">Reservar modelo</h2></div><button class="close-button" type="button" data-close-drawer aria-label="Cerrar reserva">×</button></div><div class="drawer-content">
+    <div class="reservation-product-summary" id="reservationProductSummary"></div>
+    <form id="reservationForm" novalidate><p class="reservation-help">Enviaremos tu solicitud al administrador. La unidad se separa cuando recibas la confirmación por WhatsApp.</p><label>Nombre y apellido <input id="reservationName" autocomplete="name" required minlength="2"></label><label>WhatsApp <input id="reservationPhone" inputmode="tel" autocomplete="tel" placeholder="999 999 999" required></label><label>Correo <span class="optional">Opcional</span><input id="reservationEmail" type="email" autocomplete="email"></label><label>Cantidad <input id="reservationQuantity" type="number" min="1" max="20" value="1" required></label><label>Nota <span class="optional">Opcional</span><textarea id="reservationNotes" rows="3" placeholder="Distrito, horario o consulta"></textarea></label><label class="consent"><input id="reservationConsent" type="checkbox" required><span>Acepto el uso de mis datos para gestionar la reserva, según la <a href="privacidad.html">política de privacidad</a>.</span></label><p class="form-error" id="reservationError" role="alert"></p><button class="button primary full" id="submitReservation" type="submit">Solicitar reserva</button></form>
+    <section class="order-success" id="reservationSuccess" hidden tabindex="-1"><span class="success-icon">✓</span><h3>Reserva solicitada</h3><p>Tu código es <strong id="reservationCode"></strong>. Te confirmaremos la separación por WhatsApp.</p><a class="button whatsapp full" id="reservationWhatsapp" href="#" target="_blank" rel="noopener">Avisar por WhatsApp</a><button class="button secondary full" id="finishReservation" type="button">Listo</button></section>
+  </div></aside>
+
   <div class="detail-backdrop" id="detailBackdrop" hidden></div>
   <section class="product-detail-modal" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="detailName" aria-hidden="true" hidden>
     <button class="detail-close close-button" id="detailClose" type="button" aria-label="Cerrar detalle">×</button>
@@ -92,11 +98,11 @@
       <div class="detail-characteristics" id="detailCharacteristics"></div>
       <section class="related-products" id="relatedProducts" aria-labelledby="relatedTitle" hidden><h3 id="relatedTitle">También podrían interesarte</h3><div id="relatedGrid"></div></section>
       <p class="detail-photo-note" id="detailPhotoNote" hidden>La fotografía posterior está pendiente de registro.</p>
-      <div class="detail-actions"><button class="button whatsapp" id="detailWhatsapp" type="button">Comprar por WhatsApp</button><button class="button secondary" id="detailAdd" type="button">Agregar al carrito</button><button class="button secondary" id="detailFavorite" type="button">Guardar favorito</button><button class="button secondary" id="detailShare" type="button">Compartir</button></div>
+      <div class="detail-actions"><button class="button whatsapp" id="detailWhatsapp" type="button">Comprar por WhatsApp</button><button class="button primary" id="detailReserve" type="button">Reservar 24 h</button><button class="button secondary" id="detailAdd" type="button">Agregar al carrito</button><button class="button secondary" id="detailFavorite" type="button">Guardar favorito</button><button class="button secondary" id="detailShare" type="button">Compartir</button></div>
     </div>
   </section>
 
   <a class="floating-whatsapp" id="floatingWhatsapp" href="#catalogo" aria-label="Consultar por WhatsApp"><span aria-hidden="true">WA</span><strong>Comprar</strong></a>
   <div class="toast" id="toast" role="status" aria-live="polite"></div><noscript><p class="noscript">Necesitas activar JavaScript para ver el catálogo y registrar pedidos.</p></noscript>
-  <script src="assets/vendor/supabase-2.116.0.min.js" defer></script><script src="assets/js/config.js" defer></script><script src="assets/js/data.js?v=7" defer></script><script src="assets/js/app.js?v=7" defer></script>
+  <script src="assets/vendor/supabase-2.116.0.min.js" defer></script><script src="assets/js/config.js" defer></script><script src="assets/js/data.js?v=8" defer></script><script src="assets/js/app.js?v=8" defer></script>
 </body></html>

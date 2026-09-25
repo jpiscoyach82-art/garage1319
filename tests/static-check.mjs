@@ -28,7 +28,7 @@ for(const relative of jsFiles){
 }
 
 const storefront=fs.readFileSync(path.join(root,"index.html"),"utf8");
-for(const id of ["sales-banner","productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailAdd","floatingWhatsapp","catalogPagination","salesProof","soldProofCount","featuredSection","featuredGrid","relatedProducts","relatedGrid"]){
+for(const id of ["sales-banner","productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailReserve","detailAdd","reservationDrawer","reservationForm","reservationSuccess","floatingWhatsapp","catalogPagination","salesProof","soldProofCount","featuredSection","featuredGrid","relatedProducts","relatedGrid"]){
   if(!storefront.includes(`id="${id}"`))errors.push(`index.html: falta el componente de detalle ${id}`);
 }
 const storefrontApp=fs.readFileSync(path.join(root,"assets/js/app.js"),"utf8");
@@ -44,8 +44,16 @@ if(storefrontApp.includes('.gt("stock",0)'))errors.push("app.js: la consulta tod
 if(!storefrontCss.includes(".sold-ribbon"))errors.push("styles.css: falta la banda de producto vendido");
 if(!storefrontCss.includes(".badge.fresh"))errors.push("styles.css: falta la etiqueta NUEVO");
 const admin=fs.readFileSync(path.join(root,"admin/index.html"),"utf8");
-for(const id of ["productPromoPrice","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures"]){
+for(const id of ["productPromoPrice","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures","metricRevenue","metricTicket","metricReservations","reservationList","reservationFilter"]){
   if(!admin.includes(`id="${id}"`))errors.push(`admin/index.html: falta el campo ${id}`);
+}
+const salesMigration=path.join(root,"supabase/migrations/20260925_sales_phase.sql");
+if(!fs.existsSync(salesMigration))errors.push("falta la migración de la fase de ventas");
+else{
+  const sql=fs.readFileSync(salesMigration,"utf8");
+  for(const feature of ["crear_reserva","actualizar_reserva","expirar_reservas_vencidas","reservas_estado_creado_en_idx","is_garage_admin"]){
+    if(!sql.includes(feature))errors.push(`migración de ventas: falta ${feature}`);
+  }
 }
 const collectorMigration=path.join(root,"supabase/migrations/20260916_collector_product_details.sql");
 if(!fs.existsSync(collectorMigration))errors.push("falta la migración de fichas de coleccionista");

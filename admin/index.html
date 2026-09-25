@@ -7,8 +7,8 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Administración | Garage 1319</title>
 <link rel="icon" href="../g1319-192.png">
-<link rel="stylesheet" href="../assets/css/styles.css?v=5">
-<link rel="stylesheet" href="../assets/css/admin.css?v=5">
+<link rel="stylesheet" href="../assets/css/styles.css?v=8">
+<link rel="stylesheet" href="../assets/css/admin.css?v=8">
 </head>
 <body class="admin-shell">
   <header class="admin-header">
@@ -56,10 +56,12 @@
 <button class="active" type="button" data-tab="dashboard" aria-selected="true">Resumen</button>
 <button type="button" data-tab="products">Productos</button>
 <button type="button" data-tab="orders">Pedidos</button>
+<button type="button" data-tab="reservations">Reservas <span class="tab-count" id="reservationTabCount">0</span></button>
 <button type="button" data-tab="business">Negocio</button>
 </nav>
 
       <section class="admin-view active" id="tab-dashboard">
+<div class="dashboard-toolbar"><div><p class="eyebrow">Rendimiento comercial</p><h2>Panel de ventas</h2></div><label>Periodo<select id="analyticsRange"><option value="7">7 días</option><option value="30" selected>30 días</option><option value="90">90 días</option></select></label></div>
 <div class="metric-grid">
 <article>
 <span>Productos publicados</span>
@@ -93,7 +95,24 @@
 <span>Conversión a WhatsApp</span>
 <strong id="metricConversion">0%</strong>
 </article>
+<article>
+<span>Ingresos confirmados</span>
+<strong id="metricRevenue">S/ 0</strong>
+</article>
+<article>
+<span>Ticket promedio</span>
+<strong id="metricTicket">S/ 0</strong>
+</article>
+<article>
+<span>Reservas activas</span>
+<strong id="metricReservations">0</strong>
+</article>
+<article>
+<span>Conversión a pedido</span>
+<strong id="metricOrderConversion">0%</strong>
+</article>
 </div>
+<div class="dashboard-grid">
 <div class="admin-card">
 <h2>Embudo de los últimos 30 días</h2>
 <div id="analyticsFunnel" class="analytics-funnel"></div>
@@ -101,8 +120,11 @@
 <div id="topProducts"></div>
 </div>
 <div class="admin-card">
-<h2>Stock bajo</h2>
+<h2>Alertas comerciales</h2>
+<div id="salesAlerts"></div>
+<h3>Stock bajo</h3>
 <div id="lowStockList">
+</div>
 </div>
 </div>
 <div class="admin-card">
@@ -218,6 +240,7 @@
 <div class="admin-card">
 <div class="card-heading">
 <h2>Pedidos</h2>
+<label class="compact-search">Buscar<input id="orderSearch" type="search" placeholder="Código, cliente o teléfono"></label>
 <label>Estado<select id="orderFilter">
 <option value="">Todos</option>
 <option value="pendiente">Pendientes</option>
@@ -229,6 +252,17 @@
 </div>
 <div id="orderList" class="admin-list">
 </div>
+</div>
+</section>
+
+      <section class="admin-view" id="tab-reservations">
+<div class="admin-card">
+<div class="card-heading">
+<div><p class="eyebrow">Seguimiento</p><h2>Reservas</h2></div>
+<label>Estado<select id="reservationFilter"><option value="">Todas</option><option value="pendiente">Pendientes</option><option value="confirmada">Confirmadas</option><option value="vendida">Vendidas</option><option value="vencida">Vencidas</option><option value="cancelada">Canceladas</option></select></label>
+</div>
+<p class="helper-copy">Las solicitudes vencen en 24 horas. Confirma una reserva para separar la unidad y registra la venta cuando recibas el pago.</p>
+<div id="reservationList" class="admin-list"></div>
 </div>
 </section>
 
@@ -272,7 +306,7 @@
 </script>
 <script src="../assets/js/config.js" defer>
 </script>
-<script src="../assets/js/admin.js?v=5" defer>
+<script src="../assets/js/admin.js?v=8" defer>
 </script>
 </body>
 </html>

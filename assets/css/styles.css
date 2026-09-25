@@ -145,7 +145,7 @@ img{display:block;max-width:100%}
 .detail-characteristics div{display:flex;gap:7px;flex-wrap:wrap}
 .detail-characteristics span{border:1px solid #2b5069;border-radius:999px;padding:5px 9px;color:#c5d4df;font-size:.78rem}
 .detail-photo-note{color:var(--warning);font-size:.8rem;margin:14px 0 0}
-.detail-actions{display:grid;grid-template-columns:1.25fr 1fr 1fr auto;gap:8px;margin-top:22px}
+.detail-actions{display:grid;grid-template-columns:1.35fr 1.1fr 1fr auto auto;gap:8px;margin-top:22px}
 .drawer-backdrop{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.72);backdrop-filter:blur(3px)}
 .drawer{position:fixed;right:0;top:0;z-index:100;width:min(480px,100%);height:100dvh;background:#07111b;border-left:1px solid var(--line);transform:translateX(105%);transition:transform .22s ease;box-shadow:var(--shadow);overflow:auto}
 .drawer.open{transform:translateX(0)}
@@ -163,8 +163,13 @@ img{display:block;max-width:100%}
 .remove-button{color:#ffb6be;padding:4px 8px}
 .cart-total{display:flex;justify-content:space-between;align-items:center;border-block:1px solid var(--line);padding:18px 0;margin:12px 0 24px}
 .cart-total strong{font-size:1.7rem;color:var(--brand)}
-#checkoutForm{display:grid;gap:13px}
-#checkoutForm h3{margin:0}
+#checkoutForm,#reservationForm{display:grid;gap:13px}
+#checkoutForm h3,#reservationForm h3{margin:0}
+.reservation-product-summary{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--surface-2)}
+.reservation-product-summary img{width:72px;height:72px;object-fit:cover;border-radius:10px;background:#fff}
+.reservation-product-summary strong,.reservation-product-summary span{display:block}
+.reservation-product-summary span{margin-top:4px;color:var(--muted);font-size:.8rem}
+.reservation-help{margin:0;color:var(--muted);font-size:.82rem;line-height:1.5}
 .optional{color:var(--muted);font-weight:500}
 .consent{grid-template-columns:20px 1fr!important;align-items:start;font-weight:500!important;font-size:.8rem!important}
 .consent input{width:18px!important;min-height:18px!important;margin-top:2px}
@@ -244,7 +249,7 @@ img{display:block;max-width:100%}
 .detail-copy h2{font-size:2.25rem;padding-right:44px}
 .collector-specs{grid-template-columns:1fr 1fr}
 .detail-actions{grid-template-columns:1fr 1fr}
-.detail-actions #detailWhatsapp{grid-column:1/-1}
+.detail-actions #detailWhatsapp,.detail-actions #detailReserve{grid-column:span 1}
 .floating-whatsapp{right:12px;bottom:max(12px,env(safe-area-inset-bottom));min-height:48px;padding-right:13px}
 }
 
