@@ -33,6 +33,8 @@ for(const id of ["sales-banner","productDetailModal","detailImage","detailScale"
 }
 const storefrontApp=fs.readFileSync(path.join(root,"assets/js/app.js"),"utf8");
 const storefrontCss=fs.readFileSync(path.join(root,"assets/css/styles.css"),"utf8");
+if(/Chiclayo/i.test(storefront)||/Chiclayo/i.test(storefrontApp))errors.push("la tienda todavía menciona entregas en Chiclayo");
+if(!/únicamente en Ferreñafe/i.test(storefront)||!/Ferreñafe/i.test(storefrontApp))errors.push("falta indicar que las entregas son únicamente en Ferreñafe");
 if(!storefront.includes('data-category="sold"'))errors.push("index.html: falta el filtro de vendidos");
 if(!storefront.includes('data-category="new"'))errors.push("index.html: falta el filtro de nuevos");
 if(!storefrontApp.includes("pageSize:10"))errors.push("app.js: la paginación no está configurada en 10 productos");
