@@ -1,0 +1,1003 @@
+[
+  {
+    "id": 86,
+    "codigo": "GHD06-D9COM",
+    "nombre": "'69 Ford Mustang Boss 302",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-GHD06_front_db03901d-2378-4d77-8d73-990a53945ed0.jpg?v=1764778648",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-GHD06_back_14778a18-68a1-4a55-aa37-b5acb5072ed3.jpg?v=1764778648"
+  },
+  {
+    "id": 106,
+    "codigo": "HCW86-M7C5",
+    "nombre": "Bricking Trails",
+    "imagen": "https://packturtle.com/cdn/shop/products/Bricking_Trails.jpg?v=1704827398&width=1080",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HCT36_back.jpg?v=1764779617"
+  },
+  {
+    "id": 102,
+    "codigo": "HKG58-N7C5",
+    "nombre": "Mad Mike Drift Attack",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG58_front_4d862362-749d-4e6c-9cd3-b90cbd126152.jpg?v=1764780055",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG58_back_c0956c51-561e-4eb2-b0dc-b6081d03b2cd.jpg?v=1764780055"
+  },
+  {
+    "id": 77,
+    "codigo": "HKG65-N7C5",
+    "nombre": "Land Rover Series II",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG65_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG65_back.jpg"
+  },
+  {
+    "id": 109,
+    "codigo": "HKG69-N7C5",
+    "nombre": "Porsche 911 Turbo 3.6 (964)",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG69_front_c242ae76-ce16-4c35-b772-814a0ea86f68.jpg?v=1764790020",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG69_back_26e4ef6c-649d-4d96-891b-d332db2415f8.jpg?v=1764790020"
+  },
+  {
+    "id": 24,
+    "codigo": "HKG70-N7C5",
+    "nombre": "McLaren Solus GT",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG70_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKG70_back.jpg"
+  },
+  {
+    "id": 47,
+    "codigo": "HKH73-N7C5",
+    "nombre": "Classic ’55 Nomad",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKH73_front_7c32826c-64d0-46ce-93d5-93c8b52db055.jpg?v=1764779622",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKH73_back_af2d46fb-4dcf-43a4-a7de-963193e20ab3.jpg?v=1764779622"
+  },
+  {
+    "id": 92,
+    "codigo": "HKJ07-N7C5",
+    "nombre": "Volvo 240 Drift Wagon",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ07_front_54a08430-924c-4472-8dc5-f21534cffb3b.jpg?v=1764778437",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ07_back_7de2357b-d394-43f4-8a51-3e99d3af1a54.jpg?v=1764778437"
+  },
+  {
+    "id": 17,
+    "codigo": "HKJ09-N7C5",
+    "nombre": "'64 Lincoln Continental",
+    "imagen": "https://99diecast.com/cdn/shop/files/HW-HKJ09_front_700x700.jpg?v=1764779620",
+    "imagen_posterior": "https://99diecast.com/cdn/shop/files/HW-HKJ09_back_700x700.jpg?v=1764779620"
+  },
+  {
+    "id": 107,
+    "codigo": "HKJ24-N7C5",
+    "nombre": "Heavy Hitcher",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ24_front_1f6ede39-847d-4ad3-a761-5da97d15817e.jpg?v=1764792717",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ24_back_5cd4735d-f0e3-481b-b7de-19fe4f32f099.jpg?v=1764792717"
+  },
+  {
+    "id": 31,
+    "codigo": "HKJ25-N7C5",
+    "nombre": "Mad Manga",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ25_front.jpg?v=1764780050",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ25_back.jpg?v=1764780050"
+  },
+  {
+    "id": 122,
+    "codigo": "HKJ48-N7C5",
+    "nombre": "'69 Ford Mustang Boss 302",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ48_front_7cf952be-35b1-4856-a1a7-cfa3d02c4c6d.jpg?v=1764794319",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ48_back_e2625561-26bf-4cac-8b58-4ac291042f3c.jpg?v=1764794319"
+  },
+  {
+    "id": 45,
+    "codigo": "HKJ58-N7C5",
+    "nombre": "Dune Crusher",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ58_front.jpg?v=1764796137",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ58_back.jpg?v=1764796137"
+  },
+  {
+    "id": 114,
+    "codigo": "HKJ81-N7C5",
+    "nombre": "Audi '90 quattro",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ81_front_3474ddec-1313-49ff-a636-31e51b77dd5e.jpg?v=1764789607",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ81_back_973e0b56-c8e8-4aa9-a8b6-dd261f87e943.jpg?v=1764789607"
+  },
+  {
+    "id": 76,
+    "codigo": "HKJ83-N7C5",
+    "nombre": "Alfa Romeo GTV6 3.0",
+    "imagen": "https://i.ebayimg.com/images/g/uloAAOSwFx1mR4bC/s-l1600.webp",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ83_back.jpg"
+  },
+  {
+    "id": 108,
+    "codigo": "HKK06-N7C5",
+    "nombre": "HW Poppa Wheelie",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK06_front.png?v=1781723302",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK06_back.png?v=1781723301"
+  },
+  {
+    "id": 88,
+    "codigo": "HKK32-N7C5",
+    "nombre": "Honda Super Cub",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK32_front_0d4c615c-6756-42c4-9659-2b05e7dfc41f.jpg?v=1764775367",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK32_back_2d007a9c-f024-45ea-aab9-d8224af42295.jpg?v=1764775367"
+  },
+  {
+    "id": 103,
+    "codigo": "HKK54-N7C5",
+    "nombre": "Cloud Cutter",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK54_front.jpg?v=1764786466",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK54_back.jpg?v=1764786466"
+  },
+  {
+    "id": 26,
+    "codigo": "HKK56-N7C5",
+    "nombre": "Koenigsegg Gemera",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK56_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK56_back.jpg"
+  },
+  {
+    "id": 46,
+    "codigo": "HKK59-N7C5",
+    "nombre": "Power Panel",
+    "imagen": "https://cdn.shopify.com/s/files/1/1795/0445/files/HOTWHEELS_HW_HOT_TRUCKS_POWER_PANEL_PURPLE_YELLOW.jpg?v=1695571470",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKJ01_back_6092c960-0b32-4985-96ed-4db3770e35ff.jpg?v=1764792513"
+  },
+  {
+    "id": 33,
+    "codigo": "HKK60-N7C5",
+    "nombre": "Limited Grip",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK60_front_29a195f7-bfdf-46bb-ba00-ef1a5d882f36.jpg?v=1764792894",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK60_back_764b4e43-a9e7-4646-9844-a400e0373f96.jpg?v=1764792894"
+  },
+  {
+    "id": 121,
+    "codigo": "HKK66-N7C5",
+    "nombre": "1986 Toyota Van",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK66_front.jpg?v=1766453938",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK66_back.jpg?v=1766453938"
+  },
+  {
+    "id": 87,
+    "codigo": "HKK70-N7C5",
+    "nombre": "Rescue Duty",
+    "imagen": "https://sandehobbies.com/cdn/shop/products/8BEB3047-3657-43B3-8AE3-F7F18784E603.webp?v=1704259170",
+    "imagen_posterior": "https://sandehobbies.com/cdn/shop/files/88B9AB0B-AAEA-462D-B1A1-EA8D50C7FDF7_840x.jpg?v=1782094951"
+  },
+  {
+    "id": 115,
+    "codigo": "HKK75-N7C5",
+    "nombre": "Clip Rod",
+    "imagen": "https://i.ebayimg.com/images/g/jmUAAOSw-xxl0RxE/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/HF0AAOSwr21l0RxF/s-l1600.webp"
+  },
+  {
+    "id": 91,
+    "codigo": "HKK92-N7C5",
+    "nombre": "'84 Pontiac Firebird",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK92_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HKK92_back.jpg"
+  },
+  {
+    "id": 18,
+    "codigo": "HRY45-N7C5",
+    "nombre": "Monster High Ghoul Mobile",
+    "imagen": "https://99diecast.com/cdn/shop/files/HW-HRY45_front_700x700.jpg",
+    "imagen_posterior": "https://99diecast.com/cdn/shop/files/HW-HRY45_back_700x700.jpg"
+  },
+  {
+    "id": 15,
+    "codigo": "HRY48-N7C5",
+    "nombre": "Punk Rod",
+    "imagen": "https://99diecast.com/cdn/shop/files/HW-HRY48_front_700x700.jpg",
+    "imagen_posterior": "https://99diecast.com/cdn/shop/files/HW-HRY48_back_700x700.jpg"
+  },
+  {
+    "id": 99,
+    "codigo": "HRY49-N7C5",
+    "nombre": "Czinger 21C",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HRY49_front_ac7333d7-b792-4b30-a32b-18ab226890cf.jpg?v=1764796587",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HRY49_back_848eafd9-6bec-4f51-ad75-a8d46e2d13b3.jpg?v=1764796587"
+  },
+  {
+    "id": 112,
+    "codigo": "HTB42-N7C5",
+    "nombre": "Hot Wheels High",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB42_front.jpg?v=1764774293",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB42_back.jpg?v=1764774293"
+  },
+  {
+    "id": 16,
+    "codigo": "HTB49-N7C5",
+    "nombre": "Custom Otto",
+    "imagen": "https://99diecast.com/cdn/shop/files/HW-HTB49_front_b140ef55-5d85-4a9d-a225-9de984c20e74_700x700.jpg?v=1764775601",
+    "imagen_posterior": "https://99diecast.com/cdn/shop/files/HW-HTB49_back_9499861a-a8ea-44db-9ba2-0fb6daa671c5_700x700.jpg?v=1764775601"
+  },
+  {
+    "id": 105,
+    "codigo": "HTB56-N7C5",
+    "nombre": "'15 Dodge Charger SRT",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB56_front_178bafee-14de-40f1-9d29-590dfa6b2727.jpg?v=1764771420",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB56_back_b9863dd9-b714-48d6-ab66-d0f4f392c69c.jpg?v=1764771420"
+  },
+  {
+    "id": 89,
+    "codigo": "HTB57-N7C5",
+    "nombre": "Runway Res-Q",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB57_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB57_back.jpg"
+  },
+  {
+    "id": 118,
+    "codigo": "HTB64-N7C5",
+    "nombre": "Mod Speeder",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB64_front_0b62d756-4396-4a7c-a05f-02d51834730a.jpg?v=1764791549",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB64_back_d2595904-c06b-48fb-b1b1-5ec70ff91c0d.jpg?v=1764791549"
+  },
+  {
+    "id": 117,
+    "codigo": "HTB67-N7C5",
+    "nombre": "'76 Greenwood Corvette",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB67_front_5e92b282-486d-48f7-b4c9-08974c6ea1bf.jpg?v=1764792357",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB67_back_1dde4c37-31d8-4506-b3b3-25429994343c.jpg?v=1764792357"
+  },
+  {
+    "id": 120,
+    "codigo": "HTB79-N7C5",
+    "nombre": "Volvo XC40 Recharge",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB79_front_f7561481-9803-4dda-b949-8fd52ab54295.jpg?v=1764773923",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB79_back_c337eb69-90bf-4539-8542-7d6cfcaeec3d.jpg?v=1764773923"
+  },
+  {
+    "id": 100,
+    "codigo": "HTB80-N7C5",
+    "nombre": "Tesla Model Y",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB80_front_4c4ceaa1-8164-4e49-8734-6ed2c4c6e627.jpg?v=1764784418",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB80_back_6735c3e4-11af-4785-9158-7fda8e91c0f4.jpg?v=1764784418"
+  },
+  {
+    "id": 85,
+    "codigo": "HTB96-N7C5",
+    "nombre": "Skate Grom",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB96_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB96_back.jpg"
+  },
+  {
+    "id": 90,
+    "codigo": "HTB97-N7C5",
+    "nombre": "Surf's Up",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB97_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTB97_back.jpg"
+  },
+  {
+    "id": 111,
+    "codigo": "HTC12-N7C5",
+    "nombre": "Max Steel",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC12_front_7da1e6ba-b656-4378-867b-7ed5a3e396d1.jpg?v=1764789622",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC12_back_edbbbbee-4d75-48aa-b77f-ee63ba049250.jpg?v=1764789622"
+  },
+  {
+    "id": 110,
+    "codigo": "HTC13-N7C5",
+    "nombre": "'70 Plymouth Barracuda",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC13_front_a01c6c61-0fd4-4e4a-948d-ac75ff01a64c.jpg?v=1764775968",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC13_back_b9b35022-fac8-42bd-9f0c-bf0e9619125d.jpg?v=1764775968"
+  },
+  {
+    "id": 119,
+    "codigo": "HTC17-N7C5",
+    "nombre": "Mighty K",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC17_front_369b1cc8-fa48-41a8-be0f-3e8b5e30520f.jpg?v=1764784667",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC17_back_24de915b-9f30-4fcc-85f7-f67268f1e805.jpg?v=1764784667"
+  },
+  {
+    "id": 101,
+    "codigo": "HTC18-N7C5",
+    "nombre": "Fiat 500e",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC18_front_3d620203-ddd8-4a1e-aee4-a412c40cde27.jpg?v=1764775795",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC18_back_35d26b23-f0e1-456f-b522-838221f6e577.jpg?v=1764775795"
+  },
+  {
+    "id": 113,
+    "codigo": "HTC51-N7C5",
+    "nombre": "Ford GT40",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC51_front_1f315525-6bdd-4857-b028-dbb265001d04.jpg?v=1764784016",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC51_back_60d0d2ec-f0e7-4e6a-9695-cdcb2b831aa1.jpg?v=1764784016"
+  },
+  {
+    "id": 104,
+    "codigo": "HTC52-N7C5",
+    "nombre": "2020 Ram 1500 Rebel",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC52_front_e74422f8-6b43-48d9-b92a-3d7eedfa4298.jpg?v=1764794781",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC52_back_5987294e-9219-4d24-a71b-59b35710aa3a.jpg?v=1764794781"
+  },
+  {
+    "id": 98,
+    "codigo": "HTC55-N7C5",
+    "nombre": "Brick and Motor",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC55_front.jpg?v=1764786875",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HTC55_back.jpg?v=1764786875"
+  },
+  {
+    "id": 38,
+    "codigo": "HYW24-N7C5",
+    "nombre": "Ford Model A Custom ’31",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW24_front.jpg?v=1765554819",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW24_back.jpg?v=1765554819"
+  },
+  {
+    "id": 64,
+    "codigo": "HYW35-N7C5",
+    "nombre": "Cone Shaker",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW35_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW35_back.jpg"
+  },
+  {
+    "id": 74,
+    "codigo": "HYW36-N7C5",
+    "nombre": "Amaru GTC",
+    "imagen": "https://i.ebayimg.com/images/g/OSwAAeSwdDRoSqC9/s-l1600.jpg",
+    "imagen_posterior": "https://img.ricardostatic.ch/images/c02f5e82-c182-4219-a8be-231b660b14e6/t_1800x1350/hot-wheels-safari-mode-2025-amaru-gtc-45-l"
+  },
+  {
+    "id": 58,
+    "codigo": "HYW39-N7C5",
+    "nombre": "Decidedly Go",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW39_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW39_back.jpg"
+  },
+  {
+    "id": 60,
+    "codigo": "HYW53-N7C5",
+    "nombre": "1983 Porsche 928S",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW53_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW53_back.jpg"
+  },
+  {
+    "id": 116,
+    "codigo": "HYW54-N7C5",
+    "nombre": "Jaguar XJC V12 Coupe",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW54_front.jpg?v=1774531686",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW54_back.jpg?v=1774531686"
+  },
+  {
+    "id": 55,
+    "codigo": "HYW55-N7C5",
+    "nombre": "McMurtry Spéirling",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW55_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW55_back.jpg"
+  },
+  {
+    "id": 35,
+    "codigo": "HYW87-N7C5",
+    "nombre": "Porsche 911 Rallye",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW87_front.jpg?v=1764773910",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYW87_back.jpg?v=1764773910"
+  },
+  {
+    "id": 50,
+    "codigo": "HYX42-N7C5",
+    "nombre": "Mattel Dream Mobile",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX42_front.jpg?v=1764777280",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX42_back.jpg?v=1764777280"
+  },
+  {
+    "id": 68,
+    "codigo": "HYX46-N7C5",
+    "nombre": "CUPRA e-Racer",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX46_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX46_back.jpg"
+  },
+  {
+    "id": 39,
+    "codigo": "HYX55-N7C5",
+    "nombre": "Purple Passion",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX55_front.jpg?v=1774524325",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX55_back.jpg?v=1774524325"
+  },
+  {
+    "id": 82,
+    "codigo": "HYX56-N7C5",
+    "nombre": "Small Bloc",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX56_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX56_back.jpg"
+  },
+  {
+    "id": 52,
+    "codigo": "HYX57-N7C5",
+    "nombre": "Mazda MX-5 Miata",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX57_front.jpg?v=1764794952",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX57_back.jpg?v=1764794952"
+  },
+  {
+    "id": 36,
+    "codigo": "HYX59-N7C5",
+    "nombre": "DMC DeLorean",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX59_front.jpg?v=1764783174",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX59_back.jpg?v=1764783174"
+  },
+  {
+    "id": 59,
+    "codigo": "HYX62-N7C5",
+    "nombre": "Monster High Ghoul Mobile",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX62_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX62_back.jpg"
+  },
+  {
+    "id": 80,
+    "codigo": "HYX64-N7C5",
+    "nombre": "Supercharged",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX64_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX64_back.jpg"
+  },
+  {
+    "id": 65,
+    "codigo": "HYX65-N7C5",
+    "nombre": "The Vanster",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX65_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX65_back.jpg"
+  },
+  {
+    "id": 75,
+    "codigo": "HYX66-N7C5",
+    "nombre": "Nerve Hammer",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX66_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX66_back.jpg"
+  },
+  {
+    "id": 49,
+    "codigo": "HYX67-N7C5",
+    "nombre": "Draftnator",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX67_front.jpg?v=1764770053",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX67_back.jpg?v=1764770053"
+  },
+  {
+    "id": 73,
+    "codigo": "HYX68-N7C5",
+    "nombre": "Haulerrack",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX68_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX68_back.jpg"
+  },
+  {
+    "id": 70,
+    "codigo": "HYX70-N7C5",
+    "nombre": "Hi-Roller",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX70_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX70_back.jpg"
+  },
+  {
+    "id": 81,
+    "codigo": "HYX71-N7C5",
+    "nombre": "HW50 Concept",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX71_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX71_back.jpg"
+  },
+  {
+    "id": 71,
+    "codigo": "HYX72-N7C5",
+    "nombre": "Punk Rod",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX72_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYX72_back.jpg"
+  },
+  {
+    "id": 27,
+    "codigo": "HYY05-N7C5",
+    "nombre": "TV Series Batmobile",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY05_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY05_back.jpg"
+  },
+  {
+    "id": 78,
+    "codigo": "HYY06-N7C5",
+    "nombre": "El Viento",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY06_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY06_back.jpg"
+  },
+  {
+    "id": 63,
+    "codigo": "HYY61-N7C5",
+    "nombre": "’69 Mercury Cyclone",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY61_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY61_back.jpg"
+  },
+  {
+    "id": 53,
+    "codigo": "HYY82-N7C5",
+    "nombre": "Minecraft Minecart",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY82_front.jpg?v=1764772015",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY82_back.jpg?v=1764772015"
+  },
+  {
+    "id": 37,
+    "codigo": "HYY89-N7C5",
+    "nombre": "Big-Air Bel-Air",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY89_front.jpg?v=1764784852",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY89_back.jpg?v=1764784852"
+  },
+  {
+    "id": 44,
+    "codigo": "HYY90-N7C5",
+    "nombre": "HW Ultimate T-Rex Transporter",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY90_front.jpg?v=1764772009",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY90_back.jpg?v=1764772009"
+  },
+  {
+    "id": 48,
+    "codigo": "HYY91-N7C5",
+    "nombre": "’83 Chevy Silverado",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY91_front.jpg?v=1764783579",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-HYY91_back.jpg?v=1764783579"
+  },
+  {
+    "id": 54,
+    "codigo": "JADA-85235",
+    "nombre": "Jada Toys Fast & Furious Nano Hollywood Rides – Set de 6",
+    "imagen": "https://static.wixstatic.com/media/055427_99ac5ebec35244c0a87379a2df953b68~mv2.jpg",
+    "imagen_posterior": "https://static.wixstatic.com/media/055427_0ab991b2e1a74499aa8a89731784570e~mv2.jpg"
+  },
+  {
+    "id": 57,
+    "codigo": "JBB00-N7C5",
+    "nombre": "’67 Austin Mini Van",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB00_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB00_back.jpg"
+  },
+  {
+    "id": 79,
+    "codigo": "JBB02-N7C5",
+    "nombre": "Crate Racer",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB02_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB02_back.jpg"
+  },
+  {
+    "id": 40,
+    "codigo": "JBB03-N7C5",
+    "nombre": "1978 Dodge Li’l Red Express Truck",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB03_front.jpg?v=1764794327",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB03_back.jpg?v=1764794327"
+  },
+  {
+    "id": 56,
+    "codigo": "JBB04-N7C5",
+    "nombre": "’71 Mustang Funny Car",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB04_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB04_back.jpg"
+  },
+  {
+    "id": 19,
+    "codigo": "JBB06-N7C5",
+    "nombre": "'15 Land Rover Defender Double Cab",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB06_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB06_back.jpg"
+  },
+  {
+    "id": 66,
+    "codigo": "JBB43-N7C5",
+    "nombre": "Custom ’56 Ford Truck",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB43_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB43_back.jpg"
+  },
+  {
+    "id": 34,
+    "codigo": "JBB46-N7C5",
+    "nombre": "Mo-Stash (Movember)",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB46_front.jpg?v=1774530431",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB46_back.jpg?v=1774530431"
+  },
+  {
+    "id": 61,
+    "codigo": "JBB64-N7C5",
+    "nombre": "Silverado EV RST",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB64_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB64_back.jpg"
+  },
+  {
+    "id": 42,
+    "codigo": "JBB73-N7C5",
+    "nombre": "Skull Shaker",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB73_front.jpg?v=1774518347",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB73_back.jpg?v=1774518347"
+  },
+  {
+    "id": 51,
+    "codigo": "JBB77-N7C6",
+    "nombre": "2018 Honda Civic Type R",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB77_front.jpg?v=1774521365",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB77_back.jpg?v=1774521365"
+  },
+  {
+    "id": 131,
+    "codigo": "JBB86-N7C5",
+    "nombre": "Lamborghini Huracán Sterrato",
+    "imagen": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/376289643/dsc01076-ydaveh1d02.JPG",
+    "imagen_posterior": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/376289643/dsc01077-k3fi39526w.JPG"
+  },
+  {
+    "id": 32,
+    "codigo": "JBB93-N7C5",
+    "nombre": "Ford Mustang GTD",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB93_front.jpg?v=1774539836",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB93_back.jpg?v=1774539836"
+  },
+  {
+    "id": 62,
+    "codigo": "JBB94-N7C5",
+    "nombre": "’67 Shelby GT500",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB94_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB94_back.jpg"
+  },
+  {
+    "id": 25,
+    "codigo": "JBB95-N7C5",
+    "nombre": "'96 Dodge Viper GTS",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB95_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBB95_back.jpg"
+  },
+  {
+    "id": 29,
+    "codigo": "JBC03-N7C5",
+    "nombre": "Honda Motocompo",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC03_front.jpg?v=1764873321",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC03_back.jpg?v=1764873321"
+  },
+  {
+    "id": 30,
+    "codigo": "JBC11-N7C5",
+    "nombre": "Porsche 911 Carrera Clip",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC11_front.jpg?v=1774524748",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC11_back.jpg?v=1774524748"
+  },
+  {
+    "id": 67,
+    "codigo": "JBC18-N7C5",
+    "nombre": "2018 Bentley Continental GT3",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC18_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC18_back.jpg"
+  },
+  {
+    "id": 43,
+    "codigo": "JBC28-N7C5",
+    "nombre": "Chill Mill",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC28_front.jpg?v=1764777285",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBC28_back.jpg?v=1764777285"
+  },
+  {
+    "id": 8,
+    "codigo": "JBK74-4B10",
+    "nombre": "Land Rover Defender 90",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBK74_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBK74_back.jpg"
+  },
+  {
+    "id": 7,
+    "codigo": "JBK78-4B10",
+    "nombre": "McLaren Solus GT",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBK78_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBK78_back.jpg"
+  },
+  {
+    "id": 2,
+    "codigo": "JBL11-4B10",
+    "nombre": "Maserati MC20",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBL11_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBL11_back.jpg"
+  },
+  {
+    "id": 3,
+    "codigo": "JBL67-JA10-21A",
+    "nombre": "2016 Ford GT Race",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBL67_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBL67_back.jpg"
+  },
+  {
+    "id": 5,
+    "codigo": "JBL76-JA10-21A",
+    "nombre": "Time Machine – 1955",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBL76_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBL76_back.jpg"
+  },
+  {
+    "id": 6,
+    "codigo": "JBM04-4B10",
+    "nombre": "Alfa Romeo Giulia Sprint GTA",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBM04_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JBM04_back.jpg"
+  },
+  {
+    "id": 144,
+    "codigo": "JBY70",
+    "nombre": "Volkswagen T2 Pickup",
+    "imagen": "https://99diecast.com/cdn/shop/files/HW-JBY70_front_1p1yfi_700x700.jpg?v=1788548907",
+    "imagen_posterior": "https://99diecast.com/cdn/shop/files/HW-JBY70_back_rrcv05_700x700.jpg?v=1788548907"
+  },
+  {
+    "id": 143,
+    "codigo": "JBY73",
+    "nombre": "Honda Civic Si",
+    "imagen": "https://99diecast.com/cdn/shop/files/HW-JBY73_front_700x700.jpg?v=1775810484",
+    "imagen_posterior": "https://99diecast.com/cdn/shop/files/HW-JBY73_back_700x700.jpg?v=1775810484"
+  },
+  {
+    "id": 142,
+    "codigo": "JBY74",
+    "nombre": "'81 Camaro",
+    "imagen": "https://koikoidroplets.co.nz/cdn/shop/files/IMG-3281.jpg?v=1757732140&width=1200",
+    "imagen_posterior": "https://koikoidroplets.co.nz/cdn/shop/files/IMG-3284.jpg?v=1757732140&width=1200"
+  },
+  {
+    "id": 4,
+    "codigo": "JCB78-ND511",
+    "nombre": "McLaren P1",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JCB78_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JCB78_back.jpg"
+  },
+  {
+    "id": 141,
+    "codigo": "JGK09",
+    "nombre": "Hot Wheels Mattel 80th Anniversary – Pack de 8",
+    "imagen": "https://img.eurotoys.dk/pic/webp/54-0jgk09_680.webp",
+    "imagen_posterior": "https://down-th.img.susercontent.com/file/th-11134208-7ra0g-md1b1yw1yf4047"
+  },
+  {
+    "id": 41,
+    "codigo": "JHV10-N7C5",
+    "nombre": "Draggin’ Wagon",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JHV10_front.jpg?v=1774520945",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JHV10_back.jpg?v=1774520945"
+  },
+  {
+    "id": 1,
+    "codigo": "JJH30-N7C6",
+    "nombre": "Pass 'N Go",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH30_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH30_back.jpg"
+  },
+  {
+    "id": 28,
+    "codigo": "JJH33-N7C5",
+    "nombre": "Porsche 911 Carrera T",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH33_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH33_back.jpg"
+  },
+  {
+    "id": 136,
+    "codigo": "JJH52-N7C5",
+    "nombre": "Ford F-150 Lightning Supertruck",
+    "imagen": "https://cdn.awsli.com.br/1000x1000/1226/1226195/produto/400546706/df40f6db7fdfe897a38f19c25de7bdaa-1ijizml8mz.jpg",
+    "imagen_posterior": "https://cdn.awsli.com.br/1000x1000/1226/1226195/produto/400546706/4be34558b52a32587eb724d5783e0070-29mvqijz21.jpg"
+  },
+  {
+    "id": 22,
+    "codigo": "JJH56-N7C5",
+    "nombre": "Dino 206 GT",
+    "imagen": "https://www.bbassets.com/media/uploads/p/l/40367164_1-hot-wheels-die-castjjh56.jpg",
+    "imagen_posterior": "https://www.bbassets.com/media/uploads/p/l/40367164-2_1-hot-wheels-die-castjjh56.jpg"
+  },
+  {
+    "id": 96,
+    "codigo": "JJH83-N7C5",
+    "nombre": "Batmobile",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH83_front.jpg?v=1774523283",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH83_back.jpg?v=1774523283"
+  },
+  {
+    "id": 93,
+    "codigo": "JJH86-N7C5",
+    "nombre": "Ford Mustang Mach-E 1400",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH86_front.jpg?v=1774523686",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH86_back.jpg?v=1774523686"
+  },
+  {
+    "id": 72,
+    "codigo": "JJH87-N7C5",
+    "nombre": "2020 Ford Mustang Shelby GT500",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH87_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH87_back.jpg"
+  },
+  {
+    "id": 97,
+    "codigo": "JJH91-N7C5",
+    "nombre": "'20 Jeep Gladiator",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH91_front.jpg?v=1774529944",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH91_back.jpg?v=1774529944"
+  },
+  {
+    "id": 69,
+    "codigo": "JJH97-N7C5",
+    "nombre": "’69 Dodge Charger Daytona",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH97_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJH97_back.jpg"
+  },
+  {
+    "id": 95,
+    "codigo": "JJJ12-N7C5",
+    "nombre": "Ferrari SF90 Stradale",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ12_front.jpg?v=1774518263",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ12_back.jpg?v=1774518263"
+  },
+  {
+    "id": 94,
+    "codigo": "JJJ14-N7C5",
+    "nombre": "Ford Mustang GTD",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ14_front.jpg?v=1766113783",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ14_back.jpg?v=1766113783"
+  },
+  {
+    "id": 124,
+    "codigo": "JJJ21-N7C5",
+    "nombre": "The Dark Knight Batmobile",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ21_front.jpg?v=1779881971",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ21_back.jpg?v=1779881971"
+  },
+  {
+    "id": 123,
+    "codigo": "JJJ26-N7C5",
+    "nombre": "'67 Camaro",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ26_front.jpg?v=1768546238",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ26_back.jpg?v=1768546238"
+  },
+  {
+    "id": 139,
+    "codigo": "JJJ55-N7C5",
+    "nombre": "Coupe Clip",
+    "imagen": "https://koban.pe/cdn/shop/files/IMG_5308_3bd4057a-c0d6-43ff-873e-13c0b151b54d_1200x.jpg?v=1777345230",
+    "imagen_posterior": "https://koban.pe/cdn/shop/files/IMG_5314_64919ea8-5c69-4b5c-873a-34b910dc2bdb_1200x.jpg?v=1777345231"
+  },
+  {
+    "id": 21,
+    "codigo": "JJJ87-N7C5",
+    "nombre": "'20 Dodge Charger Hellcat",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ87_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJJ87_back.jpg"
+  },
+  {
+    "id": 128,
+    "codigo": "JJJ90-N7C5",
+    "nombre": "Chevrolet La Troca",
+    "imagen": "https://cdnx.jumpseller.com/tienda-bozz/image/76598211/thumb/1440/1440?1778701036=",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/8lEAAeSwjE1pZQ5I/s-l1600.webp"
+  },
+  {
+    "id": 137,
+    "codigo": "JJK04-N7C5",
+    "nombre": "'20 Toyota GR Supra",
+    "imagen": "https://supertoys.cl/wp-content/uploads/2026/07/auto0047-20-toyota-gr-supra-247x296.webp",
+    "imagen_posterior": "https://supertoys.cl/wp-content/uploads/2026/07/auto0047_3-247x296.webp"
+  },
+  {
+    "id": 20,
+    "codigo": "JJK07-N7C5",
+    "nombre": "Lotus Sport Elise",
+    "imagen": "https://www.scale64.de/media/70/fe/f8/1783255682/hw-lotus-sport-elise-orange.jpg?ts=1783255682",
+    "imagen_posterior": "https://burnsiediecast.com.au/cdn/shop/files/IMG_8545.jpg?v=1778045972&width=1946"
+  },
+  {
+    "id": 130,
+    "codigo": "JJK14-N7C5",
+    "nombre": "'64 Lincoln Continental",
+    "imagen": "https://cdn.awsli.com.br/2518/2518221/produto/400912770/f195ec05537f42398b8fcbc1dc1ceb11-uywifbpw5t.jpg",
+    "imagen_posterior": "https://cdn.awsli.com.br/2518/2518221/produto/400912770/1c8293897f704ab4bb3e17fe3a2d5618-liuok3fd85.jpg"
+  },
+  {
+    "id": 135,
+    "codigo": "JJK21-N7C5",
+    "nombre": "'55 Chevy",
+    "imagen": "https://supertoys.cl/wp-content/uploads/2026/07/auto0044-55-chevy-jjk21-247x296.webp",
+    "imagen_posterior": "https://supertoys.cl/wp-content/uploads/2026/07/auto0044_1-247x296.webp"
+  },
+  {
+    "id": 134,
+    "codigo": "JJK22-N7C5",
+    "nombre": "Jaguar XJC V12 Coupe",
+    "imagen": "https://cdnx.jumpseller.com/tienda-bozz/image/78171459/thumb/1440/1440?1782339827=",
+    "imagen_posterior": "https://cdnx.jumpseller.com/tienda-bozz/image/78172137/thumb/1440/1440?1782339827="
+  },
+  {
+    "id": 140,
+    "codigo": "JJK23-N7C5",
+    "nombre": "'70 Buick GSX",
+    "imagen": "https://supertoys.cl/wp-content/uploads/2026/07/auto0036-70-buik-gsx-247x296.webp",
+    "imagen_posterior": "https://supertoys.cl/wp-content/uploads/2026/07/auto0036_1-247x296.webp"
+  },
+  {
+    "id": 146,
+    "codigo": "JJK24-N7C5",
+    "nombre": "'68 Shelby GT500",
+    "imagen": "https://i.ebayimg.com/images/g/jw0AAeSwunVqPqnJ/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/UEEAAeSw1-hqPqnt/s-l1600.webp"
+  },
+  {
+    "id": 126,
+    "codigo": "JJK43-N7C5",
+    "nombre": "Porsche 911 Carrera RS 2.7",
+    "imagen": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/402496185/1694db4a33574eb7a02ca3dbd42e9dd2-1te50mivjm.jpg",
+    "imagen_posterior": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/402496185/9628a55f806141d99c4651f6e4aac33e-bxj6yp9av7.jpg"
+  },
+  {
+    "id": 145,
+    "codigo": "JJK51-N7C5",
+    "nombre": "'94 Toyota Supra (Tooned)",
+    "imagen": "https://i.ebayimg.com/images/g/d~QAAeSwY89qbvz1/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/-9YAAeSwSwhqbvz0/s-l1600.webp"
+  },
+  {
+    "id": 151,
+    "codigo": "JJK52-N7C5",
+    "nombre": "1970 Custom Plymouth Roadrunner",
+    "imagen": "https://www.zoladi.com/cdn/shop/files/BA8B541D-1FCE-4A8B-92E8-C07E786ADA56.jpg?v=1789432247&width=1445",
+    "imagen_posterior": "https://www.zoladi.com/cdn/shop/files/3682AC3F-06E4-4306-8081-4D36ADE3C540.jpg?v=1789432302&width=1445"
+  },
+  {
+    "id": 147,
+    "codigo": "JJK54-N7C5",
+    "nombre": "'71 Lamborghini Miura SV",
+    "imagen": "https://i.ebayimg.com/images/g/XRIAAeSwGb1qqBsT/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/mJsAAeSwmuBqqBsm/s-l1600.webp"
+  },
+  {
+    "id": 23,
+    "codigo": "JJK74-N7C5",
+    "nombre": "'16 Lamborghini Centenario Roadster",
+    "imagen": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJK74_front.jpg",
+    "imagen_posterior": "https://cdn.shopify.com/s/files/1/0568/7246/8615/files/HW-JJK74_back.jpg"
+  },
+  {
+    "id": 129,
+    "codigo": "JJK78-N7C5",
+    "nombre": "Ford Mustang Mach-E 1400",
+    "imagen": "https://cdn.awsli.com.br/1226/1226195/produto/400524053/ad5971bcfb84c5edbb6f682ca80b5b6c-6wte5w00t7.jpg",
+    "imagen_posterior": "https://cdn.awsli.com.br/1226/1226195/produto/400524053/f782ff69ea9ef0eaa8820468f88fef18-nsghmmcemb.jpg"
+  },
+  {
+    "id": 138,
+    "codigo": "JJK79-N7C5",
+    "nombre": "'70 Dodge Hemi Challenger",
+    "imagen": "https://cdn.myikas.com/images/38f46e05-2817-4bf7-b6c0-b7b19a9d262f/94f48659-ac65-4e01-9dea-88c8a3ed7fda/3840/whatsapp-image-2026-04-11-at-08.webp",
+    "imagen_posterior": "https://cdn.myikas.com/images/38f46e05-2817-4bf7-b6c0-b7b19a9d262f/94f48659-ac65-4e01-9dea-88c8a3ed7fda/3840/whatsapp-image-2026-04-11-at-08.webp"
+  },
+  {
+    "id": 133,
+    "codigo": "JJK81-N7C5",
+    "nombre": "'59 Chevy Impala",
+    "imagen": "https://supertoys.cl/wp-content/uploads/2026/07/auto0045-59-chevy-impala-jjk81-247x296.webp",
+    "imagen_posterior": "https://supertoys.cl/wp-content/uploads/2026/07/auto0045_1-247x296.webp"
+  },
+  {
+    "id": 127,
+    "codigo": "JJK82-N7C5",
+    "nombre": "Quick Chat",
+    "imagen": "https://cdnx.jumpseller.com/tienda-bozz/image/80140769/thumb/1440/1440?1787083968=",
+    "imagen_posterior": "https://cdn.fcglcdn.com/brainbees/images/products/583x720/23074890f.webp"
+  },
+  {
+    "id": 125,
+    "codigo": "JJL13-N7C5",
+    "nombre": "The Dark Knight Batmobile",
+    "imagen": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/402496146/c501e363b47e4ab792d4e442605a4fa4-fyjrlcaubs.jpg",
+    "imagen_posterior": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/402496146/c76ae928d7ad45968f4ecf0ddf676783-za1569j8p7.jpg"
+  },
+  {
+    "id": 149,
+    "codigo": "JJL34-N7C5",
+    "nombre": "Toyota Prius Custom",
+    "imagen": "https://i.ebayimg.com/images/g/bTsAAeSwquFqr0Ax/s-l1600.webp",
+    "imagen_posterior": "https://c.diecarz.com/cars-big/ID147201_K9URgN7PZkuQ.webp"
+  },
+  {
+    "id": 150,
+    "codigo": "JJL39-N7C5",
+    "nombre": "'96 Porsche Carrera",
+    "imagen": "https://i.ebayimg.com/images/g/kz8AAeSweKZqrsD6/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/zH8AAeSwNsRqrsEh/s-l1600.webp"
+  },
+  {
+    "id": 148,
+    "codigo": "JJL53-N7C5",
+    "nombre": "Datsun 240Z",
+    "imagen": "https://i.ebayimg.com/images/g/IcUAAeSwjOdqsrjh/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/GjsAAeSwqwxqsrkB/s-l1600.webp"
+  },
+  {
+    "id": 132,
+    "codigo": "JKY28-JA10",
+    "nombre": "Porsche 356 Outlaw",
+    "imagen": "https://www.zoladi.com/cdn/shop/files/99867858-CD40-48DA-BDB0-92A4708F11A8.jpg?v=1782961344&width=1946",
+    "imagen_posterior": "https://www.zoladi.com/cdn/shop/files/8944F9D0-DF17-4A28-8F12-C654D9B727B3.jpg?v=1782961409&width=1946"
+  }
+]

@@ -2,5 +2,5 @@
   "name":"garage1319",
   "version":"2.0.0",
   "private":true,
-  "scripts":{"test":"node tests/static-check.mjs"}
+  "scripts":{"test":"node tests/static-check.mjs && node tests/catalog-loading.mjs && node scripts/check-images.mjs","check:images":"node scripts/check-images.mjs --live","mirror:images":"node scripts/mirror-images.mjs"}
 }

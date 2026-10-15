@@ -30,6 +30,16 @@ Catálogo móvil de Hot Wheels y diecast con inventario, carrito, pedidos por Wh
 
 ## Validación automática
 
+### Actualización de fiabilidad — 15/10/2026
+
+- El catálogo mantiene un skeleton mientras consulta Supabase; el estado vacío solo se muestra después de completar la consulta.
+- La consulta del inventario tiene límite de 8 segundos por intento, un reintento automático y recuperación manual mediante “Reintentar carga”. Las consultas auxiliares también tienen límite de tiempo.
+- Las fotografías verificadas se sirven desde `assets/images/catalog/`, mediante `assets/js/image-map.js`. No se modifican las URL originales de Supabase: una fotografía cambiada posteriormente no queda oculta por una copia anterior.
+- El respaldo se identifica expresamente como tal, con advertencia de confirmar precio y disponibilidad.
+- La acción de validación se ejecuta también los lunes y manualmente. `npm run check:images` compara el inventario público actual con las copias para detectar fotografías nuevas sin respaldo local.
+- Para copiar fotos nuevas, actualizar `scripts/catalog-images-source.json` desde los campos públicos `id,codigo,nombre,imagen,imagen_posterior` y ejecutar `npm run mirror:images`. Solo se generan entradas para archivos descargados y reconocidos como imágenes; revisar los fallos antes de publicar.
+- Las fuentes originales permanecen en el inventario y en el archivo de procedencia; alojar una copia no cambia sus derechos de uso.
+
 ```bash
 npm test
 ```

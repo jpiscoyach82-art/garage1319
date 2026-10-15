@@ -4,6 +4,8 @@
   const cfg=window.GARAGE_CONFIG||{};
   const fallback=window.GARAGE_FALLBACK_PRODUCTS||[];
   const fallbackByCode=Object.fromEntries(fallback.map(p=>[p.code,p]));
+  let catalogStatus="loading",loadInFlight=false;
+  const imageMap=window.GARAGE_IMAGE_MAP||{};
   const state={products:[],cart:read("g1319_v2_cart",{}),favorites:read("g1319_v2_favorites",[]),category:"all",query:"",sort:"newest",view:read("g1319_v2_view","grid"),page:1,pageSize:10,business:{name:"Garage 1319",subtitle:"FamPiS · Diecast Collectibles",currency:"S/",whatsapp:cfg.defaultWhatsapp||"",delivery:"Entrega o recojo únicamente en Ferreñafe, coordinado por WhatsApp.",instagram:""},client:null,activeDrawer:null,activeDetail:null,reservationProduct:null,lastFocus:null,sessionId:getSessionId(),deepLinkOpened:false};
 
   function read(key,fallbackValue){try{const value=JSON.parse(localStorage.getItem(key));return value??fallbackValue}catch{return fallbackValue}}
@@ -12,8 +14,8 @@
   function esc(value){return String(value??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]))}
   function digits(value){return String(value||"").replace(/\D/g,"")}
   function money(value){return `${state.business.currency} ${Number(value||0).toFixed(2).replace(/\.00$/,"")}`}
-  function safeImage(value,fallbackImage){const url=String(value||"").trim();if(!url)return fallbackImage||"g1319-512.png";if(url.startsWith("assets/")||url.startsWith("data:image/")||/^https:\/\//i.test(url))return url;return fallbackImage||"g1319-512.png"}
-  function optionalImage(value){const url=String(value||"").trim();return url&&(url.startsWith("assets/")||url.startsWith("data:image/")||/^https:\/\//i.test(url))?url:""}
+  function safeImage(value,fallbackImage){const url=String(value||"").trim();if(!url)return imageMap[fallbackImage]||fallbackImage||"g1319-512.png";if(imageMap[url])return imageMap[url];if(url.startsWith("assets/")||url.startsWith("data:image/")||/^https:\/\//i.test(url))return url;return imageMap[fallbackImage]||fallbackImage||"g1319-512.png"}
+  function optionalImage(value){const url=String(value||"").trim();return imageMap[url]||(url&&(url.startsWith("assets/")||url.startsWith("data:image/")||/^https:\/\//i.test(url))?url:"")}
   function validColor(value){return /^#[0-9a-f]{6}$/i.test(String(value||""))?value:null}
   function toast(message){const node=$("toast");node.textContent=message;node.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>node.classList.remove("show"),2300)}
   function productUrl(product){const url=new URL(cfg.siteUrl||location.href,location.href);url.searchParams.set("producto",product.code||product.id);url.hash="catalogo";return url.toString()}
@@ -25,8 +27,34 @@
   function normalizePromo(row){return {productId:String(row.producto_id),type:row.tipo||"percent",value:Number(row.valor??row.descuento??0),active:row.activa!==false,end:row.fin?new Date(row.fin).getTime():Infinity,title:row.titulo||"Oferta"}}
   function applyPromos(products,promos){const now=Date.now();return products.map(product=>{const promo=promos.find(p=>p.productId===String(product.dbId)&&p.active&&p.end>now);let promoPrice=product.promoPrice>0&&product.promoPrice<product.price?product.promoPrice:0,title=promoPrice?"Oferta":"";if(promo){promoPrice=promo.type==="percent"?Math.max(0,Math.round(product.price*(1-promo.value/100))):Math.max(0,promo.value);title=promo.title}return promoPrice>0&&promoPrice<product.price?{...product,regularPrice:product.price,price:promoPrice,promo:title}:product})}
 
-  async function loadData(){let products=fallback.map(normalizeProduct),promos=[];const client=initClient();if(client){try{const [productResult,promoResult,configResult]=await Promise.all([client.from("productos").select("*").eq("visible",true).order("creado_en",{ascending:false}),client.from("promociones").select("*").eq("activa",true),client.from("configuracion").select("clave,valor")]);if(productResult.error)throw productResult.error;if(productResult.data?.length)products=productResult.data.map(normalizeProduct);if(!promoResult.error)promos=(promoResult.data||[]).map(normalizePromo);if(!configResult.error)applyBusiness(Object.fromEntries((configResult.data||[]).map(row=>[row.clave,row.valor])))}catch(error){console.warn("Garage Cloud:",error.message);toast("Mostrando catálogo de respaldo")}}
-    state.products=applyPromos(products,promos).filter(p=>p.visible);pruneSaved();renderAll();$("catalogGrid").setAttribute("aria-busy","false");track("visita",null,{utm_source:new URLSearchParams(location.search).get("utm_source")||"directo"});openDeepLinkedProduct()}
+  async function timedQuery(factory){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);try{return await factory(controller.signal)}finally{clearTimeout(timer)}}
+  async function loadData(){
+    if(loadInFlight)return;loadInFlight=true;catalogStatus="loading";renderCatalog();
+    let products=[],promos=[];
+    try{
+      const client=state.client||initClient();if(!client)throw new Error("Inventario no disponible");
+      let productResult;
+      for(let attempt=0;attempt<2;attempt++){
+        try{productResult=await timedQuery(signal=>client.from("productos").select("*").eq("visible",true).order("creado_en",{ascending:false}).abortSignal(signal));if(productResult.error)throw productResult.error;break}
+        catch(error){if(attempt===1)throw error;await new Promise(resolve=>setTimeout(resolve,700))}
+      }
+      // A successful empty response is authoritative: never resurrect sold/hidden fallback items.
+      products=(productResult.data||[]).map(normalizeProduct);
+      const extras=await Promise.allSettled([
+        timedQuery(signal=>client.from("promociones").select("*").eq("activa",true).abortSignal(signal)),
+        timedQuery(signal=>client.from("configuracion").select("clave,valor").abortSignal(signal))
+      ]);
+      const promoResult=extras[0].status==="fulfilled"?extras[0].value:null,configResult=extras[1].status==="fulfilled"?extras[1].value:null;
+      if(promoResult&&!promoResult.error)promos=(promoResult.data||[]).map(normalizePromo);
+      if(configResult&&!configResult.error)applyBusiness(Object.fromEntries((configResult.data||[]).map(row=>[row.clave,row.valor])));
+      catalogStatus="ready";
+    }catch(error){console.warn("Garage Cloud:",error.message);products=fallback.map(normalizeProduct);catalogStatus=products.length?"backup":"error"}
+    finally{
+      state.products=applyPromos(products,promos).filter(p=>p.visible);loadInFlight=false;
+      if(catalogStatus==="ready")pruneSaved();renderAll();
+    }
+    if(catalogStatus==="ready"){track("visita",null,{utm_source:new URLSearchParams(location.search).get("utm_source")||"directo"});openDeepLinkedProduct()}
+  }
 
   function applyBusiness(map){state.business={...state.business,name:map.brand_name||map.negocio_nombre||state.business.name,subtitle:map.brand_subtitle||map.negocio_subtitulo||state.business.subtitle,currency:map.brand_currency||map.negocio_moneda||state.business.currency,whatsapp:map.brand_whatsapp||map.whatsapp||state.business.whatsapp,delivery:map.negocio_entrega||state.business.delivery,instagram:map.negocio_instagram||state.business.instagram};const nameParts=state.business.name.trim().split(/\s+/);const last=nameParts.length>1?nameParts.pop():"";$("brandName").innerHTML=`${esc(nameParts.join(" ")||state.business.name)}${last?` <em>${esc(last)}</em>`:""}`;$("brandSubtitle").textContent=state.business.subtitle;$("footerName").textContent=state.business.name;$("deliveryText").textContent=state.business.delivery;const primary=validColor(map.brand_primary),bg=validColor(map.brand_bg);if(primary)document.documentElement.style.setProperty("--brand",primary);if(bg)document.documentElement.style.setProperty("--bg",bg);if(map.brand_logo)$("brandLogo").src=safeImage(map.brand_logo,$("brandLogo").src);configureLinks()}
   function configureLinks(){const message=`Hola, vi el catálogo de ${state.business.name}. Deseo consultar modelos disponibles y coordinar entrega o recojo en Ferreñafe.`;[$("heroWhatsapp"),$("footerWhatsapp"),$("bannerWhatsapp"),$("comboWhatsapp"),$("floatingWhatsapp")].forEach(link=>{link.href=whatsappUrl(message);link.target="_blank";link.rel="noopener"});if(state.business.instagram){const link=$("instagramLink");link.href=state.business.instagram;link.hidden=false;link.target="_blank";link.rel="noopener"}}
@@ -40,7 +68,17 @@
   function paginationTokens(total,current){if(total<=7)return Array.from({length:total},(_,i)=>i+1);const pages=[1],start=Math.max(2,current-1),end=Math.min(total-1,current+1);if(start>2)pages.push("ellipsis-start");for(let page=start;page<=end;page++)pages.push(page);if(end<total-1)pages.push("ellipsis-end");pages.push(total);return pages}
   function renderPagination(totalPages){const nav=$("catalogPagination");nav.hidden=totalPages<=1;if(totalPages<=1){nav.innerHTML="";return}const tokens=paginationTokens(totalPages,state.page);nav.innerHTML=`<button class="page-nav" type="button" data-page="${state.page-1}" ${state.page===1?"disabled":""} aria-label="Página anterior"><span aria-hidden="true">‹</span><span class="pagination-label">Anterior</span></button>${tokens.map(token=>typeof token==="number"?`<button class="page-number ${token===state.page?"active":""}" type="button" data-page="${token}" ${token===state.page?'aria-current="page"':""} aria-label="Página ${token}">${token}</button>`:`<span class="page-ellipsis" aria-hidden="true">…</span>`).join("")}<button class="page-nav" type="button" data-page="${state.page+1}" ${state.page===totalPages?"disabled":""} aria-label="Página siguiente"><span class="pagination-label">Siguiente</span><span aria-hidden="true">›</span></button>`}
   function productCard(product){const favorite=state.favorites.includes(product.id),sold=isSold(product),stockLabel=sold?"Vendido":product.stock===1?"Última unidad":`${product.stock} disponibles`;return `<article class="product-card ${sold?"sold":""}" data-product-id="${esc(product.id)}"><div class="product-image"><img src="${esc(product.image)}" width="600" height="600" loading="lazy" decoding="async" alt="${esc(product.name)}">${sold?'<span class="sold-ribbon" aria-label="Producto vendido">Vendido</span>':""}<div class="badge-list"><span class="badge">${esc(product.edition||product.category)}</span>${isNew(product)?'<span class="badge fresh">Nuevo</span>':""}${product.promo&&!sold?`<span class="badge new">${esc(product.promo)}</span>`:""}</div></div><div class="product-info"><span class="product-series">${esc(product.collection||product.category)}</span><h3>${esc(product.name)}</h3><div class="product-price"><div>${product.regularPrice&&!sold?`<del>${money(product.regularPrice)}</del>`:""}<strong>${money(product.price)}</strong></div><span class="stock ${sold?"sold-stock":product.stock===1?"low":""}">${stockLabel}</span></div><div class="card-actions collector-actions ${sold?"sold-actions":""}"><button class="details" type="button" data-action="details" aria-label="Ver detalles de ${esc(product.name)}">Ver detalles</button>${sold?"":`<button class="whatsapp-buy" type="button" data-action="whatsapp" aria-label="Comprar ${esc(product.name)} por WhatsApp">Comprar</button>`}<button class="favorite ${favorite?"active":""}" type="button" data-action="favorite" aria-label="${favorite?"Quitar de":"Agregar a"} favoritos">${favorite?"♥":"♡"}</button></div></div></article>`}
-  function renderCatalog(){const products=filteredProducts(),grid=$("catalogGrid"),totalPages=Math.max(1,Math.ceil(products.length/state.pageSize));state.page=Math.min(Math.max(1,state.page),totalPages);const start=(state.page-1)*state.pageSize,pageProducts=products.slice(start,start+state.pageSize),availableCount=products.filter(product=>!isSold(product)).length;grid.className=`product-grid ${state.view==="showcase"?"showcase":""}`;grid.innerHTML=pageProducts.map(productCard).join("");$("resultCount").textContent=products.length?`${products.length} modelos · ${availableCount} disponibles · página ${state.page} de ${totalPages}`:"Sin resultados";$("emptyState").hidden=products.length>0;renderPagination(totalPages)}
+  function renderCatalog(){
+    const grid=$("catalogGrid"),loading=catalogStatus==="loading";
+    grid.setAttribute("aria-busy",String(loading));$("catalogNotice").hidden=!["backup","error"].includes(catalogStatus);
+    $("catalogNoticeText").textContent=catalogStatus==="backup"?"No pudimos actualizar el inventario. Estás viendo un catálogo de respaldo: confirma precio y disponibilidad antes de comprar.":"No pudimos cargar el catálogo. Revisa tu conexión y vuelve a intentarlo.";
+    if(loading){grid.className="product-grid";grid.innerHTML=Array.from({length:6},()=>'<div class="catalog-skeleton" aria-hidden="true"><div></div><span></span><span></span></div>').join("");$("resultCount").textContent="Cargando catálogo…";$("emptyState").hidden=true;$("catalogPagination").hidden=true;return}
+    const products=filteredProducts(),totalPages=Math.max(1,Math.ceil(products.length/state.pageSize));state.page=Math.min(Math.max(1,state.page),totalPages);
+    const start=(state.page-1)*state.pageSize,pageProducts=products.slice(start,start+state.pageSize),availableCount=products.filter(product=>!isSold(product)).length;
+    grid.className=`product-grid ${state.view==="showcase"?"showcase":""}`;grid.innerHTML=pageProducts.map(productCard).join("");
+    $("resultCount").textContent=products.length?`${products.length} modelos · ${availableCount} disponibles · página ${state.page} de ${totalPages}`:catalogStatus==="error"?"Inventario no disponible":"Sin resultados";
+    $("emptyState").hidden=products.length>0||catalogStatus==="error";renderPagination(totalPages)
+  }
   function renderFeatured(){const products=state.products.filter(product=>!isSold(product)).sort((a,b)=>(Number(Boolean(b.promo))*100+Number(b.featured)*60+Number(b.stock===1)*20+Number(isNew(b))*10)-(Number(Boolean(a.promo))*100+Number(a.featured)*60+Number(a.stock===1)*20+Number(isNew(a))*10)||b.createdAt-a.createdAt).slice(0,6);$("featuredGrid").innerHTML=products.map(productCard).join("");$("featuredSection").hidden=!products.length}
   function renderSalesProof(){const sold=state.products.filter(isSold).length;$("soldProofCount").textContent=sold;$("salesProof").hidden=sold===0}
   function renderCounts(){const units=Object.values(state.cart).reduce((sum,n)=>sum+Number(n||0),0);$("cartCount").textContent=units;$("favoriteCount").textContent=state.favorites.length}
@@ -77,6 +115,6 @@
 
   function bindSalesEvents(){$("detailReserve").addEventListener("click",()=>{if(state.activeDetail)beginReservation(state.activeDetail)});$("reservationForm").addEventListener("submit",submitReservation);$("finishReservation").addEventListener("click",()=>closeDrawer())}
 
-  function init(){$("year").textContent=new Date().getFullYear();restoreBuyer();bindEvents();bindEnhancements();bindSalesEvents();document.querySelector(`[data-view="${state.view}"]`)?.click();renderAll();configureLinks();loadData();if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn))}
+  function init(){$("year").textContent=new Date().getFullYear();restoreBuyer();bindEvents();bindEnhancements();bindSalesEvents();$("retryCatalog").addEventListener("click",loadData);document.querySelector(`[data-view="${state.view}"]`)?.click();renderAll();configureLinks();loadData();if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn))}
   document.readyState==="loading"?document.addEventListener("DOMContentLoaded",init):init();
 })();

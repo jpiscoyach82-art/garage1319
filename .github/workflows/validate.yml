@@ -1,5 +1,8 @@
 name: Validar Garage 1319
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 15 * * 1'
   push:
     branches: [main]
   pull_request:
@@ -12,3 +15,6 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - name: Validar cobertura del inventario público
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: npm run check:images
