@@ -1001,7 +1001,7 @@
     "imagen_posterior": "https://www.zoladi.com/cdn/shop/files/8944F9D0-DF17-4A28-8F12-C654D9B727B3.jpg?v=1782961409&width=1946"
   },
   {
-    "id": 151,
+    "id": 152,
     "codigo": "JJM06-N7C5",
     "nombre": "2 Jet Z",
     "imagen": "https://i.ebayimg.com/images/g/JNAAAeSwCRdpg2IV/s-l1600.webp",
@@ -1013,5 +1013,19 @@
     "nombre": "'98 Honda Prelude",
     "imagen": "https://i.etsystatic.com/26925193/r/il/ff3b7a/7961713944/il_794xN.7961713944_h9bx.jpg",
     "imagen_posterior": "https://i.etsystatic.com/26925193/r/il/e512fc/7961714134/il_794xN.7961714134_bv9d.jpg"
+  },
+  {
+    "id": 154,
+    "codigo": "JJK50-N7C5",
+    "nombre": "'96 Dodge Viper GTS",
+    "imagen": "https://i.ebayimg.com/images/g/sCwAAeSwgYVqdkgZ/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/hTsAAeSwWKNqdkhG/s-l1600.webp"
+  },
+  {
+    "id": 155,
+    "codigo": "JJL44-N7C5",
+    "nombre": "Gordon Murray Automotive T.33",
+    "imagen": "https://i.ebayimg.com/images/g/g6oAAeSwPmNp9Q-8/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/SB4AAeSwDe5p9Q~O/s-l1600.webp"
   }
 ]
