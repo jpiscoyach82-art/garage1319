@@ -917,7 +917,7 @@
     "imagen_posterior": "https://i.ebayimg.com/images/g/-9YAAeSwSwhqbvz0/s-l1600.webp"
   },
   {
-    "id": 151,
+    "id": 152,
     "codigo": "JJK52-N7C5",
     "nombre": "1970 Custom Plymouth Roadrunner",
     "imagen": "https://www.zoladi.com/cdn/shop/files/BA8B541D-1FCE-4A8B-92E8-C07E786ADA56.jpg?v=1789432247&width=1445",
@@ -999,5 +999,19 @@
     "nombre": "Porsche 356 Outlaw",
     "imagen": "https://www.zoladi.com/cdn/shop/files/99867858-CD40-48DA-BDB0-92A4708F11A8.jpg?v=1782961344&width=1946",
     "imagen_posterior": "https://www.zoladi.com/cdn/shop/files/8944F9D0-DF17-4A28-8F12-C654D9B727B3.jpg?v=1782961409&width=1946"
+  },
+  {
+    "id": 151,
+    "codigo": "JJM06-N7C5",
+    "nombre": "2 Jet Z",
+    "imagen": "https://i.ebayimg.com/images/g/JNAAAeSwCRdpg2IV/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/MBAAAeSwMFBpg2IX/s-l1600.webp"
+  },
+  {
+    "id": 153,
+    "codigo": "JJJ89-N7C5",
+    "nombre": "'98 Honda Prelude",
+    "imagen": "https://i.etsystatic.com/26925193/r/il/ff3b7a/7961713944/il_794xN.7961713944_h9bx.jpg",
+    "imagen_posterior": "https://i.etsystatic.com/26925193/r/il/e512fc/7961714134/il_794xN.7961714134_bv9d.jpg"
   }
 ]

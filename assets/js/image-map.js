@@ -284,5 +284,9 @@ window.GARAGE_IMAGE_MAP=Object.freeze({
   "https://c.diecarz.com/cars-big/ID147201_K9URgN7PZkuQ.webp": "assets/images/catalog/185c1e1ec9bf877d182a.webp",
   "https://www.zoladi.com/cdn/shop/files/8944F9D0-DF17-4A28-8F12-C654D9B727B3.jpg?v=1782961409&width=1946": "assets/images/catalog/7de5e38ced62b41dc396.webp",
   "https://www.zoladi.com/cdn/shop/files/99867858-CD40-48DA-BDB0-92A4708F11A8.jpg?v=1782961344&width=1946": "assets/images/catalog/2a7ef2d5eae1fda5a78b.webp",
-  "https://cdnx.jumpseller.com/tienda-bozz/image/80140769/thumb/1440/1440?1787083968=": "assets/images/catalog/7ebbc835d8de5bb1a47e.webp"
+  "https://cdnx.jumpseller.com/tienda-bozz/image/80140769/thumb/1440/1440?1787083968=": "assets/images/catalog/7ebbc835d8de5bb1a47e.webp",
+  "https://i.ebayimg.com/images/g/JNAAAeSwCRdpg2IV/s-l1600.webp": "assets/images/catalog/155bbf308bfd14ed9774.webp",
+  "https://i.ebayimg.com/images/g/MBAAAeSwMFBpg2IX/s-l1600.webp": "assets/images/catalog/e35e28094d8733f519f0.webp",
+  "https://i.etsystatic.com/26925193/r/il/ff3b7a/7961713944/il_794xN.7961713944_h9bx.jpg": "assets/images/catalog/6dd1a3ee6708d4839cd5.webp",
+  "https://i.etsystatic.com/26925193/r/il/e512fc/7961714134/il_794xN.7961714134_bv9d.jpg": "assets/images/catalog/55b7e6433541e33dbc27.webp"
 });
