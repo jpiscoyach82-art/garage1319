@@ -1034,5 +1034,12 @@
     "nombre": "’68 Corvette – Gas Monkey Garage",
     "imagen": "https://i.ebayimg.com/images/g/ztYAAeSwaTFqtHWd/s-l1600.webp",
     "imagen_posterior": "https://i.ebayimg.com/images/g/0EQAAeSwiKpqtHWe/s-l1600.webp"
+  },
+  {
+    "id": 157,
+    "codigo": "JBN91-4B10",
+    "nombre": "2016 Nissan Sentra SR",
+    "imagen": "https://i.ebayimg.com/images/g/erIAAeSwQyto4wBd/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/RWAAAeSwkNFo4wBd/s-l1600.webp"
   }
 ]

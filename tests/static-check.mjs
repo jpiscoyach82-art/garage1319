@@ -28,7 +28,7 @@ for(const relative of jsFiles){
 }
 
 const storefront=fs.readFileSync(path.join(root,"index.html"),"utf8");
-for(const id of ["sales-banner","productDetailModal","detailImage","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailReserve","detailAdd","reservationDrawer","reservationForm","reservationSuccess","floatingWhatsapp","catalogPagination","salesProof","soldProofCount","featuredSection","featuredGrid","relatedProducts","relatedGrid"]){
+for(const id of ["sales-banner","productDetailModal","detailImage","detailBrand","detailScale","detailCondition","detailEdition","detailStock","detailDelivery","detailWhatsapp","detailReserve","detailAdd","reservationDrawer","reservationForm","reservationSuccess","floatingWhatsapp","catalogPagination","salesProof","soldProofCount","featuredSection","featuredGrid","relatedProducts","relatedGrid","brandList"]){
   if(!storefront.includes(`id="${id}"`))errors.push(`index.html: falta el componente de detalle ${id}`);
 }
 const storefrontApp=fs.readFileSync(path.join(root,"assets/js/app.js"),"utf8");
@@ -37,6 +37,9 @@ if(/Chiclayo/i.test(storefront)||/Chiclayo/i.test(storefrontApp))errors.push("la
 if(!/únicamente en Ferreñafe/i.test(storefront)||!/Ferreñafe/i.test(storefrontApp))errors.push("falta indicar que las entregas son únicamente en Ferreñafe");
 if(!storefront.includes('data-category="sold"'))errors.push("index.html: falta el filtro de vendidos");
 if(!storefront.includes('data-category="new"'))errors.push("index.html: falta el filtro de nuevos");
+for(const brand of ["Hot Wheels","Matchbox","Jada"]){
+  if(!storefront.includes(`data-brand="${brand}"`))errors.push(`index.html: falta el filtro de marca ${brand}`);
+}
 if(!storefrontApp.includes("pageSize:10"))errors.push("app.js: la paginación no está configurada en 10 productos");
 if(!storefrontApp.includes("function renderPagination"))errors.push("app.js: falta renderPagination");
 if(!storefrontApp.includes("function renderFeatured"))errors.push("app.js: falta la sección de destacados");
@@ -46,9 +49,12 @@ if(storefrontApp.includes('.gt("stock",0)'))errors.push("app.js: la consulta tod
 if(!storefrontCss.includes(".sold-ribbon"))errors.push("styles.css: falta la banda de producto vendido");
 if(!storefrontCss.includes(".badge.fresh"))errors.push("styles.css: falta la etiqueta NUEVO");
 const admin=fs.readFileSync(path.join(root,"admin/index.html"),"utf8");
-for(const id of ["productPromoPrice","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures","metricRevenue","metricTicket","metricReservations","reservationList","reservationFilter"]){
+for(const id of ["productPromoPrice","productBrand","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures","metricRevenue","metricTicket","metricReservations","reservationList","reservationFilter"]){
   if(!admin.includes(`id="${id}"`))errors.push(`admin/index.html: falta el campo ${id}`);
 }
+const brandMigration=path.join(root,"supabase/migrations/20261016_product_brand.sql");
+if(!fs.existsSync(brandMigration))errors.push("falta la migración de marca del producto");
+else if(!fs.readFileSync(brandMigration,"utf8").includes("marca"))errors.push("migración de marca: falta la columna marca");
 const salesMigration=path.join(root,"supabase/migrations/20260925_sales_phase.sql");
 if(!fs.existsSync(salesMigration))errors.push("falta la migración de la fase de ventas");
 else{
