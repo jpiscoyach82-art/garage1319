@@ -1041,5 +1041,12 @@
     "nombre": "2016 Nissan Sentra SR",
     "imagen": "https://i.ebayimg.com/images/g/erIAAeSwQyto4wBd/s-l1600.webp",
     "imagen_posterior": "https://i.ebayimg.com/images/g/RWAAAeSwkNFo4wBd/s-l1600.webp"
+  },
+  {
+    "id": 158,
+    "codigo": "JJL37-N7C5",
+    "nombre": "Ferrari 12Cilindri",
+    "imagen": "https://i.ebayimg.com/images/g/d8IAAeSw6wNqlVzN/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/4AsAAeSwrj5qlVzN/s-l1600.webp"
   }
 ]
