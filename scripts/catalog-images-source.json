@@ -1048,5 +1048,12 @@
     "nombre": "Ferrari 12Cilindri",
     "imagen": "https://i.ebayimg.com/images/g/d8IAAeSw6wNqlVzN/s-l1600.webp",
     "imagen_posterior": "https://i.ebayimg.com/images/g/4AsAAeSwrj5qlVzN/s-l1600.webp"
+  },
+  {
+    "id": 159,
+    "codigo": "JJL41-N7C5",
+    "nombre": "Maserati Tipo 61",
+    "imagen": "https://i.ebayimg.com/images/g/2QUAAeSwmmZqhzNu/s-l1600.webp",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/3rcAAeSwTtFqh2q-/s-l1600.webp"
   }
 ]
