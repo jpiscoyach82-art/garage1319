@@ -299,6 +299,6 @@ window.GARAGE_IMAGE_MAP=Object.freeze({
   "https://i.ebayimg.com/images/g/RWAAAeSwkNFo4wBd/s-l1600.webp": "assets/images/catalog/c7e5a3d2b3088242f402.webp",
   "https://i.ebayimg.com/images/g/d8IAAeSw6wNqlVzN/s-l1600.webp": "assets/images/catalog/f69ec4f3e4ac0221a74d.webp",
   "https://i.ebayimg.com/images/g/4AsAAeSwrj5qlVzN/s-l1600.webp": "assets/images/catalog/f1a6c5baf27a4a625a5b.webp",
-  "https://i.ebayimg.com/images/g/2QUAAeSwmmZqhzNu/s-l1600.webp": "assets/images/catalog/dd3e8532c4284073bc6b.webp",
-  "https://i.ebayimg.com/images/g/3rcAAeSwTtFqh2q-/s-l1600.webp": "assets/images/catalog/751e3a80a59d83644d70.webp"
+  "https://cdn.shopify.com/s/files/1/0345/0696/5051/files/IMG_8583_50ffefb6-f80e-44de-b51c-c9a887a1cf93.jpg?v=1790946661": "assets/images/catalog/962d7e1b422995eb2f79.webp",
+  "https://cdn.shopify.com/s/files/1/0345/0696/5051/files/IMG_8584_477661e9-5896-4e52-af9f-f2332bd92263.jpg?v=1790946661": "assets/images/catalog/35d44086f197a5605dfd.webp"
 });
