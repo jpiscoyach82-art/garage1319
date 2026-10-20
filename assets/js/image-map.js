@@ -301,8 +301,10 @@ window.GARAGE_IMAGE_MAP=Object.freeze({
   "https://i.ebayimg.com/images/g/4AsAAeSwrj5qlVzN/s-l1600.webp": "assets/images/catalog/f1a6c5baf27a4a625a5b.webp",
   "https://cdn.shopify.com/s/files/1/0345/0696/5051/files/IMG_8583_50ffefb6-f80e-44de-b51c-c9a887a1cf93.jpg?v=1790946661": "assets/images/catalog/962d7e1b422995eb2f79.webp",
   "https://cdn.shopify.com/s/files/1/0345/0696/5051/files/IMG_8584_477661e9-5896-4e52-af9f-f2332bd92263.jpg?v=1790946661": "assets/images/catalog/35d44086f197a5605dfd.webp",
-  "https://i.ebayimg.com/images/g/fZIAAeSwp-ZqqBw~/s-l1600.webp": "assets/images/catalog/jjl35-front.webp",
-  "https://i.ebayimg.com/images/g/55YAAeSw3qdqpc5p/s-l1600.webp": "assets/images/catalog/jjl35-rear.webp",
+  "https://i.ebayimg.com/images/g/fZIAAeSwp-ZqqBw~/s-l1600.webp": "assets/images/catalog/jjl35-gold-front.webp",
+  "https://i.ebayimg.com/images/g/55YAAeSw3qdqpc5p/s-l1600.webp": "assets/images/catalog/jjl35-gold-rear.webp",
   "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-front.webp": "assets/images/catalog/jjl35-front.webp",
-  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-rear.webp": "assets/images/catalog/jjl35-rear.webp"
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-rear.webp": "assets/images/catalog/jjl35-rear.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-gold-front.webp": "assets/images/catalog/jjl35-gold-front.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-gold-rear.webp": "assets/images/catalog/jjl35-gold-rear.webp"
 });
