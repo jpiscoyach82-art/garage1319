@@ -306,5 +306,21 @@ window.GARAGE_IMAGE_MAP=Object.freeze({
   "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-front.webp": "assets/images/catalog/jjl35-front.webp",
   "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-rear.webp": "assets/images/catalog/jjl35-rear.webp",
   "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-gold-front.webp": "assets/images/catalog/jjl35-gold-front.webp",
-  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-gold-rear.webp": "assets/images/catalog/jjl35-gold-rear.webp"
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl35-gold-rear.webp": "assets/images/catalog/jjl35-gold-rear.webp",
+  "https://i.ebayimg.com/images/g/8wwAAeSwtMVqr0XX/s-l1600.jpg": "assets/images/catalog/jjl36-cadillac-front.webp",
+  "https://i.ebayimg.com/images/g/x9UAAeSwIYZqwUVc/s-l1600.jpg": "assets/images/catalog/jjl36-cadillac-rear.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl36-cadillac-front.webp": "assets/images/catalog/jjl36-cadillac-front.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl36-cadillac-rear.webp": "assets/images/catalog/jjl36-cadillac-rear.webp",
+  "https://i.ebayimg.com/images/g/EqkAAeSwsoRqhJeY/s-l1600.png": "assets/images/catalog/jjk44-mercedes-front.webp",
+  "https://i.ebayimg.com/images/g/tckAAeSwXvtqvZR4/s-l1600.jpg": "assets/images/catalog/jjk44-mercedes-rear.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjk44-mercedes-front.webp": "assets/images/catalog/jjk44-mercedes-front.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjk44-mercedes-rear.webp": "assets/images/catalog/jjk44-mercedes-rear.webp",
+  "https://i.ebayimg.com/images/g/iF0AAeSwjJxqeg0k/s-l1600.png": "assets/images/catalog/jjl24-aston-front.webp",
+  "https://i.ebayimg.com/images/g/JbAAAeSwdntqoJqZ/s-l1600.jpg": "assets/images/catalog/jjl24-aston-rear.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl24-aston-front.webp": "assets/images/catalog/jjl24-aston-front.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl24-aston-rear.webp": "assets/images/catalog/jjl24-aston-rear.webp",
+  "https://i.ebayimg.com/images/g/g~IAAeSw0O5qs9CE/s-l1600.jpg": "assets/images/catalog/jjl17-el-segundo-front.webp",
+  "https://i.ebayimg.com/images/g/FTYAAeSwNiZqs9CE/s-l1600.jpg": "assets/images/catalog/jjl17-el-segundo-rear.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl17-el-segundo-front.webp": "assets/images/catalog/jjl17-el-segundo-front.webp",
+  "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjl17-el-segundo-rear.webp": "assets/images/catalog/jjl17-el-segundo-rear.webp"
 });

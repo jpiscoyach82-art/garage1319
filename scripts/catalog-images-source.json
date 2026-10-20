@@ -1062,5 +1062,33 @@
     "nombre": "Mazda RX-7",
     "imagen": "https://i.ebayimg.com/images/g/fZIAAeSwp-ZqqBw~/s-l1600.webp",
     "imagen_posterior": "https://i.ebayimg.com/images/g/55YAAeSw3qdqpc5p/s-l1600.webp"
+  },
+  {
+    "id": 161,
+    "codigo": "JJL36-N7C5",
+    "nombre": "'16 Cadillac ATS-V R",
+    "imagen": "https://i.ebayimg.com/images/g/8wwAAeSwtMVqr0XX/s-l1600.jpg",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/x9UAAeSwIYZqwUVc/s-l1600.jpg"
+  },
+  {
+    "id": 162,
+    "codigo": "JJK44-N7C5",
+    "nombre": "'19 Mercedes-Benz A-Class",
+    "imagen": "https://i.ebayimg.com/images/g/EqkAAeSwsoRqhJeY/s-l1600.png",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/tckAAeSwXvtqvZR4/s-l1600.jpg"
+  },
+  {
+    "id": 163,
+    "codigo": "JJL24-N7C5",
+    "nombre": "2024 Aston Martin Vantage GT3",
+    "imagen": "https://i.ebayimg.com/images/g/iF0AAeSwjJxqeg0k/s-l1600.png",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/JbAAAeSwdntqoJqZ/s-l1600.jpg"
+  },
+  {
+    "id": 164,
+    "codigo": "JJL17-N7C5",
+    "nombre": "El Segundo Coupe",
+    "imagen": "https://i.ebayimg.com/images/g/g~IAAeSw0O5qs9CE/s-l1600.jpg",
+    "imagen_posterior": "https://i.ebayimg.com/images/g/FTYAAeSwNiZqs9CE/s-l1600.jpg"
   }
 ]
