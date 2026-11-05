@@ -1,0 +1,379 @@
+{
+  "updatedAt": "2026-11-05",
+  "required": "Fotografía del modelo exacto fuera del empaque sobre fondo blanco, con resolución suficiente para apreciar detalles.",
+  "note": "Pendientes tras revisar catálogos de fabricantes y comercios. La coincidencia de código no sustituye la verificación visual de color, ruedas y accesorios. JJL34 requiere confirmar la variante con caja de techo.",
+  "products": [
+    {
+      "codigo": "GHD06-D9COM",
+      "nombre": "'69 Ford Mustang Boss 302"
+    },
+    {
+      "codigo": "HCW86-M7C5",
+      "nombre": "Bricking Trails"
+    },
+    {
+      "codigo": "HKG58-N7C5",
+      "nombre": "Mad Mike Drift Attack"
+    },
+    {
+      "codigo": "HKG65-N7C5",
+      "nombre": "Land Rover Series II"
+    },
+    {
+      "codigo": "HKG69-N7C5",
+      "nombre": "Porsche 911 Turbo 3.6 (964)"
+    },
+    {
+      "codigo": "HKG70-N7C5",
+      "nombre": "McLaren Solus GT"
+    },
+    {
+      "codigo": "HKH73-N7C5",
+      "nombre": "Classic ’55 Nomad"
+    },
+    {
+      "codigo": "HKJ07-N7C5",
+      "nombre": "Volvo 240 Drift Wagon"
+    },
+    {
+      "codigo": "HKJ09-N7C5",
+      "nombre": "'64 Lincoln Continental"
+    },
+    {
+      "codigo": "HKJ24-N7C5",
+      "nombre": "Heavy Hitcher"
+    },
+    {
+      "codigo": "HKJ25-N7C5",
+      "nombre": "Mad Manga"
+    },
+    {
+      "codigo": "HKJ48-N7C5",
+      "nombre": "'69 Ford Mustang Boss 302"
+    },
+    {
+      "codigo": "HKJ58-N7C5",
+      "nombre": "Dune Crusher"
+    },
+    {
+      "codigo": "HKJ81-N7C5",
+      "nombre": "Audi '90 quattro"
+    },
+    {
+      "codigo": "HKJ83-N7C5",
+      "nombre": "Alfa Romeo GTV6 3.0"
+    },
+    {
+      "codigo": "HKK06-N7C5",
+      "nombre": "HW Poppa Wheelie"
+    },
+    {
+      "codigo": "HKK32-N7C5",
+      "nombre": "Honda Super Cub"
+    },
+    {
+      "codigo": "HKK54-N7C5",
+      "nombre": "Cloud Cutter"
+    },
+    {
+      "codigo": "HKK56-N7C5",
+      "nombre": "Koenigsegg Gemera"
+    },
+    {
+      "codigo": "HKK59-N7C5",
+      "nombre": "Power Panel"
+    },
+    {
+      "codigo": "HKK60-N7C5",
+      "nombre": "Limited Grip"
+    },
+    {
+      "codigo": "HKK66-N7C5",
+      "nombre": "1986 Toyota Van"
+    },
+    {
+      "codigo": "HKK70-N7C5",
+      "nombre": "Rescue Duty"
+    },
+    {
+      "codigo": "HKK75-N7C5",
+      "nombre": "Clip Rod"
+    },
+    {
+      "codigo": "HKK92-N7C5",
+      "nombre": "'84 Pontiac Firebird"
+    },
+    {
+      "codigo": "HRY45-N7C5",
+      "nombre": "Monster High Ghoul Mobile"
+    },
+    {
+      "codigo": "HRY48-N7C5",
+      "nombre": "Punk Rod"
+    },
+    {
+      "codigo": "HRY49-N7C5",
+      "nombre": "Czinger 21C"
+    },
+    {
+      "codigo": "HTB42-N7C5",
+      "nombre": "Hot Wheels High"
+    },
+    {
+      "codigo": "HTB49-N7C5",
+      "nombre": "Custom Otto"
+    },
+    {
+      "codigo": "HTB56-N7C5",
+      "nombre": "'15 Dodge Charger SRT"
+    },
+    {
+      "codigo": "HTB57-N7C5",
+      "nombre": "Runway Res-Q"
+    },
+    {
+      "codigo": "HTB64-N7C5",
+      "nombre": "Mod Speeder"
+    },
+    {
+      "codigo": "HTB67-N7C5",
+      "nombre": "'76 Greenwood Corvette"
+    },
+    {
+      "codigo": "HTB79-N7C5",
+      "nombre": "Volvo XC40 Recharge"
+    },
+    {
+      "codigo": "HTB80-N7C5",
+      "nombre": "Tesla Model Y"
+    },
+    {
+      "codigo": "HTB96-N7C5",
+      "nombre": "Skate Grom"
+    },
+    {
+      "codigo": "HTB97-N7C5",
+      "nombre": "Surf's Up"
+    },
+    {
+      "codigo": "HTC12-N7C5",
+      "nombre": "Max Steel"
+    },
+    {
+      "codigo": "HTC13-N7C5",
+      "nombre": "'70 Plymouth Barracuda"
+    },
+    {
+      "codigo": "HTC17-N7C5",
+      "nombre": "Mighty K"
+    },
+    {
+      "codigo": "HTC51-N7C5",
+      "nombre": "Ford GT40"
+    },
+    {
+      "codigo": "HTC52-N7C5",
+      "nombre": "2020 Ram 1500 Rebel"
+    },
+    {
+      "codigo": "HTC55-N7C5",
+      "nombre": "Brick and Motor"
+    },
+    {
+      "codigo": "HYW36-N7C5",
+      "nombre": "Amaru GTC"
+    },
+    {
+      "codigo": "HYW53-N7C5",
+      "nombre": "1983 Porsche 928S"
+    },
+    {
+      "codigo": "HYW55-N7C5",
+      "nombre": "McMurtry Spéirling"
+    },
+    {
+      "codigo": "HYW87-N7C5",
+      "nombre": "Porsche 911 Rallye"
+    },
+    {
+      "codigo": "HYX55-N7C5",
+      "nombre": "Purple Passion"
+    },
+    {
+      "codigo": "HYX56-N7C5",
+      "nombre": "Small Bloc"
+    },
+    {
+      "codigo": "HYX57-N7C5",
+      "nombre": "Mazda MX-5 Miata"
+    },
+    {
+      "codigo": "HYX59-N7C5",
+      "nombre": "DMC DeLorean"
+    },
+    {
+      "codigo": "HYX62-N7C5",
+      "nombre": "Monster High Ghoul Mobile"
+    },
+    {
+      "codigo": "HYX64-N7C5",
+      "nombre": "Supercharged"
+    },
+    {
+      "codigo": "HYX65-N7C5",
+      "nombre": "The Vanster"
+    },
+    {
+      "codigo": "HYX66-N7C5",
+      "nombre": "Nerve Hammer"
+    },
+    {
+      "codigo": "HYX67-N7C5",
+      "nombre": "Draftnator"
+    },
+    {
+      "codigo": "HYX68-N7C5",
+      "nombre": "Haulerrack"
+    },
+    {
+      "codigo": "HYX70-N7C5",
+      "nombre": "Hi-Roller"
+    },
+    {
+      "codigo": "HYX71-N7C5",
+      "nombre": "HW50 Concept"
+    },
+    {
+      "codigo": "HYX72-N7C5",
+      "nombre": "Punk Rod"
+    },
+    {
+      "codigo": "HYY05-N7C5",
+      "nombre": "TV Series Batmobile"
+    },
+    {
+      "codigo": "HYY06-N7C5",
+      "nombre": "El Viento"
+    },
+    {
+      "codigo": "HYY61-N7C5",
+      "nombre": "’69 Mercury Cyclone"
+    },
+    {
+      "codigo": "HYY82-N7C5",
+      "nombre": "Minecraft Minecart"
+    },
+    {
+      "codigo": "HYY90-N7C5",
+      "nombre": "HW Ultimate T-Rex Transporter"
+    },
+    {
+      "codigo": "HYY91-N7C5",
+      "nombre": "’83 Chevy Silverado"
+    },
+    {
+      "codigo": "JADA-85235",
+      "nombre": "Jada Toys Fast & Furious Nano Hollywood Rides – Set de 6"
+    },
+    {
+      "codigo": "JBB02-N7C5",
+      "nombre": "Crate Racer"
+    },
+    {
+      "codigo": "JBB03-N7C5",
+      "nombre": "1978 Dodge Li’l Red Express Truck"
+    },
+    {
+      "codigo": "JBB04-N7C5",
+      "nombre": "’71 Mustang Funny Car"
+    },
+    {
+      "codigo": "JBB06-N7C5",
+      "nombre": "'15 Land Rover Defender Double Cab"
+    },
+    {
+      "codigo": "JBB43-N7C5",
+      "nombre": "Custom ’56 Ford Truck"
+    },
+    {
+      "codigo": "JBB46-N7C5",
+      "nombre": "Mo-Stash (Movember)"
+    },
+    {
+      "codigo": "JBB86-N7C5",
+      "nombre": "Lamborghini Huracán Sterrato"
+    },
+    {
+      "codigo": "JBB93-N7C5",
+      "nombre": "Ford Mustang GTD"
+    },
+    {
+      "codigo": "JBB94-N7C5",
+      "nombre": "’67 Shelby GT500"
+    },
+    {
+      "codigo": "JBB95-N7C5",
+      "nombre": "'96 Dodge Viper GTS"
+    },
+    {
+      "codigo": "JBC03-N7C5",
+      "nombre": "Honda Motocompo"
+    },
+    {
+      "codigo": "JBC11-N7C5",
+      "nombre": "Porsche 911 Carrera Clip"
+    },
+    {
+      "codigo": "JBC18-N7C5",
+      "nombre": "2018 Bentley Continental GT3"
+    },
+    {
+      "codigo": "JBC28-N7C5",
+      "nombre": "Chill Mill"
+    },
+    {
+      "codigo": "JBL67-JA10-21A",
+      "nombre": "2016 Ford GT Race"
+    },
+    {
+      "codigo": "JBN91-4B10",
+      "nombre": "2016 Nissan Sentra SR"
+    },
+    {
+      "codigo": "JBY70",
+      "nombre": "Volkswagen T2 Pickup"
+    },
+    {
+      "codigo": "JBY73",
+      "nombre": "Honda Civic Si"
+    },
+    {
+      "codigo": "JBY74",
+      "nombre": "'81 Camaro"
+    },
+    {
+      "codigo": "JCB78-ND511",
+      "nombre": "McLaren P1"
+    },
+    {
+      "codigo": "JHV10-N7C5",
+      "nombre": "Draggin’ Wagon"
+    },
+    {
+      "codigo": "JJH87-N7C5",
+      "nombre": "2020 Ford Mustang Shelby GT500"
+    },
+    {
+      "codigo": "JJH91-N7C5",
+      "nombre": "'20 Jeep Gladiator"
+    },
+    {
+      "codigo": "JJH97-N7C5",
+      "nombre": "’69 Dodge Charger Daytona"
+    },
+    {
+      "codigo": "JJL34-N7C5",
+      "nombre": "Toyota Prius Custom"
+    }
+  ]
+}
