@@ -10,7 +10,7 @@ Catálogo móvil de Hot Wheels y diecast con inventario, carrito, pedidos por Wh
 - Pedido transaccional con precio calculado en el servidor.
 - Stock separado al registrar el pedido y restaurado al cancelarlo.
 - Panel administrativo independiente en `/admin/`.
-- Fichas de coleccionista con galería frontal/posterior, escala, empaque, edición, stock, precio y entrega.
+- Fichas de coleccionista con foto del empaque y vista del modelo fuera del empaque, escala, condición, edición, stock, precio y entrega.
 - Tarjetas simplificadas y ventana accesible de “Ver detalles”.
 - Precio promocional calculado también en el servidor al registrar el pedido.
 - RLS, funciones SQL y bucket de imágenes documentados como migración.
@@ -24,7 +24,7 @@ Catálogo móvil de Hot Wheels y diecast con inventario, carrito, pedidos por Wh
 4. Crear o invitar al usuario administrador en Supabase Auth.
 5. Insertar su UUID en `public.admin_users` usando la instrucción incluida al final de la migración principal.
 6. Revisar `assets/js/config.js` y confirmar URL y llave pública de Supabase.
-7. Completar escala, condición, fotografía posterior y entrega desde `/admin/`.
+7. Completar escala, condición, fotografía del modelo fuera del empaque sobre fondo blanco y entrega desde `/admin/`.
 8. Probar catálogo, detalle, pedido, cancelación, confirmación de venta y carga de fotografías.
 9. Publicar la rama `main` con GitHub Pages.
 

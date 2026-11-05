@@ -49,7 +49,7 @@ if(storefrontApp.includes('.gt("stock",0)'))errors.push("app.js: la consulta tod
 if(!storefrontCss.includes(".sold-ribbon"))errors.push("styles.css: falta la banda de producto vendido");
 if(!storefrontCss.includes(".badge.fresh"))errors.push("styles.css: falta la etiqueta NUEVO");
 const admin=fs.readFileSync(path.join(root,"admin/index.html"),"utf8");
-for(const id of ["productPromoPrice","productBrand","productScale","productCondition","productEdition","productBackImage","productDelivery","productFeatures","metricRevenue","metricTicket","metricReservations","reservationList","reservationFilter"]){
+for(const id of ["productPromoPrice","productBrand","productScale","productCondition","productEdition","productModelImage","productDelivery","productFeatures","metricRevenue","metricTicket","metricReservations","reservationList","reservationFilter"]){
   if(!admin.includes(`id="${id}"`))errors.push(`admin/index.html: falta el campo ${id}`);
 }
 const brandMigration=path.join(root,"supabase/migrations/20261016_product_brand.sql");
@@ -71,6 +71,9 @@ else{
     if(!sql.includes(column))errors.push(`migración de coleccionista: falta ${column}`);
   }
 }
+const modelImageMigration=path.join(root,"supabase/migrations/20261104_product_model_image.sql");
+if(!fs.existsSync(modelImageMigration))errors.push("falta la migración de imagen del modelo");
+else if(!fs.readFileSync(modelImageMigration,"utf8").includes("imagen_modelo"))errors.push("migración de imagen del modelo: falta imagen_modelo");
 
 if(errors.length){console.error(errors.join("\n"));process.exit(1)}
 console.log("Garage 1319 V2: validación estática correcta.");
