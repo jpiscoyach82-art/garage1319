@@ -26,5 +26,53 @@
     "source": "https://shop.mattel.com/products/hot-wheels-collector-vehiculo-de-coleccion-mattel-80-aniversario-paquete-de-8-autos-jgk09-es-mx",
     "width": 1600,
     "height": 1600
+  },
+  {
+    "codigo": "JJH52-N7C5",
+    "nombre": "Ford F-150 Lightning Supertruck",
+    "source": "https://cdn.awsli.com.br/1000x1000/1226/1226195/produto/400546706/4be34558b52a32587eb724d5783e0070-29mvqijz21.jpg",
+    "url": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/172a5c4c0c3628aa870d.webp",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "codigo": "JJK14-N7C5",
+    "nombre": "'64 Lincoln Continental",
+    "source": "https://cdn.awsli.com.br/2518/2518221/produto/400912770/1c8293897f704ab4bb3e17fe3a2d5618-liuok3fd85.jpg",
+    "url": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/c0e2168b5caed750918d.webp",
+    "width": 1024,
+    "height": 1003
+  },
+  {
+    "codigo": "JJK43-N7C5",
+    "nombre": "Porsche 911 Carrera RS 2.7",
+    "source": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/402496185/9628a55f806141d99c4651f6e4aac33e-bxj6yp9av7.jpg",
+    "url": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/ef006c7b3a5d9083118a.webp",
+    "width": 1220,
+    "height": 1172
+  },
+  {
+    "codigo": "JJK51-N7C5",
+    "nombre": "'94 Toyota Supra (Tooned)",
+    "source": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjk51-rear.webp",
+    "url": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/jjk51-rear.webp",
+    "width": 1440,
+    "height": 1440
+  },
+  {
+    "codigo": "JJK78-N7C5",
+    "nombre": "Ford Mustang Mach-E 1400",
+    "source": "https://cdn.awsli.com.br/1226/1226195/produto/400524053/f782ff69ea9ef0eaa8820468f88fef18-nsghmmcemb.jpg",
+    "url": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/cd5ebab606e2ac21efc5.webp",
+    "width": 1024,
+    "height": 1024
+  },
+  {
+    "codigo": "JJL13-N7C5",
+    "nombre": "The Dark Knight Batmobile",
+    "source": "https://cdn.awsli.com.br/2500x2500/2518/2518221/produto/402496146/c76ae928d7ad45968f4ecf0ddf676783-za1569j8p7.jpg",
+    "url": "https://jpiscoyach82-art.github.io/garage1319/assets/images/catalog/0a0ff05a79a94c7ca677.webp",
+    "width": 1220,
+    "height": 1178
   }
 ]
