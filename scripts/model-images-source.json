@@ -1,0 +1,30 @@
+[
+  {
+    "codigo": "JBL11",
+    "url": "https://cdn.shopify.com/s/files/1/0568/1132/3597/files/9c522f61d3cecffbf25c31245bfcd2c0d1976d17.jpg?v=1765306412&width=1600",
+    "source": "https://creations.mattel.com/products/hot-wheels-boulevard-vehicle-jbl11",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "codigo": "JBM04",
+    "url": "https://cdn.shopify.com/s/files/1/0600/0141/9429/files/66e5fb35778f78654c0ea5344e7f5cc743344519_64577ccb-801f-45df-9469-17a7d14a3f73.jpg?v=1742529903&width=1600",
+    "source": "https://shop.mattel.com/products/hot-wheels-collector-vehiculo-de-coleccion-alfa-romeo-guilia-sprint-gta-jbm04-es-mx",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "codigo": "JBK74",
+    "url": "https://cdn.shopify.com/s/files/1/0600/0141/9429/files/d55245476cf8812371ddeb389ba1d0cdc14a38db_ee8a536d-8bfc-4f3c-aee3-07db92e6d6c1.jpg?v=1742480709&width=1600",
+    "source": "https://shop.mattel.com/products/hot-wheels-collector-veiculo-de-brinquedo-land-rover-defender-90-jbk74-pt-br",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "codigo": "JGK09",
+    "url": "https://cdn.shopify.com/s/files/1/0600/0141/9429/files/19e029bc8c50eddf562804f8ab3d78956c007864_c4ce9086-3d61-44db-aedc-4183977c447e.jpg?v=1761255746&width=1600",
+    "source": "https://shop.mattel.com/products/hot-wheels-collector-vehiculo-de-coleccion-mattel-80-aniversario-paquete-de-8-autos-jgk09-es-mx",
+    "width": 1600,
+    "height": 1600
+  }
+]
